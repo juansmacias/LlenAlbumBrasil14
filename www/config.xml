@@ -6,15 +6,15 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>HelloWorld</name>
+    <name>LlenAlbumBrasil14</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        La mejor herramienta para llevar control sobre que Monas tienes y cuales repetidas. Asi te encargas de llenar el album del Mundial Brasil y ya!
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
-    </author>
+			La Hofiz
+		</author>
 
     <!--
         Enable individual API permissions here.
