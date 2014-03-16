@@ -1,4 +1,4 @@
-	body.fondo
+		body.fondo
 			{
 				text-align:center;
 				color:black;
@@ -158,3 +158,8 @@
 			    border-radius:25px;
                 
 			}
+			
+	.monas-footer-item{
+	background:#E8E510;
+	border-color: #E8E510;
+	}
