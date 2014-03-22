@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel ='stylesheet' href="css/Monas.css">
+ 		<link rel='stylesheet' href="css/jquery.mobile-1.4.2.css">
+		<link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">   
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+		<script src="js/ls-store.js"></script>
+		<script src="js/main.js"></script>
+		<style>
+			div.casillas
+			{
+				text-align:center;
+				border:1px;
+				border-style:solid;
+				border-color:black;
+				background-color:white;
+				background:white;
+				width:35px;
+				height:20px;
+				float:left;
+			}
+			
+			div.cambioFila 
+			{
+    			margin-bottom: 0px;
+    			padding: 0px;
+    			clear:both;
+			}
+
+		</style>
+    </head>
+    <body>
+	
+	<div style='margin-bottom:0px;'>
+		<div style='text-align:center;border:1px;border-style:solid;border-color:black;background-color:green;background:green;width:65px;height:20px;'>
+			Lista
+		</div> 
+		<div style='text-align:center;border:1px;border-style:solid;border-color:black;background-color:orange;background:orange;width:65px;height:20px;'>
+			Repetida
+		</div> 
+	</div>
+	<br>
+	<input type='submit' id='btnEstado' onclick='Actualizar()' value='Actualizar'>
+	
+	
+	<br>
+	<br>
+	<br>
+	<div id='estadoLista' title='bloqueado'></div>
+	
+<!--   Ejemplo para hacerlo por un número fijo de filas 
+	<div class='cambioFila'>
+	
+    	<div id='casiila1' class='casillas'>
+    		100
+	    </div>
+    	<div id='casiila2' class='casillas'>
+    		101
+	    </div>
+    	<div id='casiila1' class='casillas'>
+    		200
+    	</div>
+
+    </div>
+    <div class='cambioFila'>
+    
+    	<div id='casiila1' class='casillas'>
+    		100
+    	</div>
+    	<div id='casiila2' class='casillas'>
+    		101
+    	</div>
+    	<div id='casiila1' class='casillas'>
+    		200
+    	</div>
+    </div>
+-->
+<a onclick='CambioEstadoMona("00");return false;'>
+<div id = 'casilla00' class='casillas' style='background:white;color:black'>
+00
+</div>
+</a>
+
+  <script>
+		var numCasillas = 100;
+   		for(var i=0; i <= numCasillas;i++)
+     	{
+     	    document.write("<a onclick='CambioEstadoMona("+i+");return false;'>");
+   			document.write("<div id = 'casilla"+i+"' class='casillas' style='background:white;color:black'>"+i);
+   		    document.write("</div>");
+   			document.write("</a>");
+		}
+		
+function CambioEstadoMona(i)
+{
+	if(document.getElementById("estadoLista").title == "cambio")
+		{
+		if(document.getElementById("casilla"+i).style.background == "white")
+		{
+			document.getElementById("casilla"+i).style.background="green";
+		}
+		else if(document.getElementById("casilla"+i).style.background == "green")
+		{
+			document.getElementById("casilla"+i).style.background="orange";
+		}
+	}
+}
+
+function Actualizar()
+{
+	if(document.getElementById("estadoLista").title == "cambio")
+	{
+		document.getElementById("estadoLista").title="bloqueado";
+		document.getElementById("btnEstado").value="Actualizar";
+	}
+	else if(document.getElementById("estadoLista").title == "bloqueado")
+	{
+		document.getElementById("estadoLista").title="cambio";
+		document.getElementById("btnEstado").value="Listo";
+	}
+}
+  </script>
+  
+
+    </body>
+</html>

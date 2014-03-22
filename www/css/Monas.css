@@ -93,6 +93,39 @@
 				margin-right:auto;
 				float:right;
 			}
+			span.busquedaNumeros2
+			{
+			    position:static;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:2px solid #4BB5FF;
+			    border-radius:10px 0px 0px 10px;
+				background-color:none;
+				background:#4BB5FF;
+				width:100px;
+				height:25px;
+				margin-left:40%;
+				margin-right:50%;
+    			display:inline-block;
+    			float:right;
+    			
+				
+			}
+			span.busquedaEquipos2
+			{
+			    position:absolute;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:2px solid #4BB5FF;
+			    border-radius:0px 10px 10px 0px;
+				background:white;
+				width:100px;
+				height:25px;
+				margin-left:50%;
+				margin-right:auto;
+				float:right;
+				opacity:0.55;
+			}
 			div.listaFilas
 			{
 			    position:relative;
@@ -156,6 +189,10 @@
 			    width:60px;
 			    height:10px;
 			    border-radius:25px;
+			    float:right;
+			    margin-right:auto;
+			    margin-left:auto;
+		
                 
 			}
 			
