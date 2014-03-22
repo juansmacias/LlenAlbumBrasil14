@@ -11,9 +11,24 @@
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
-
+		<script>
+		
+		function CambioEstadoMona(i)
+		{
+				if(document.getElementById("estadoLista").title == "cambio")
+				{
+					if(document.getElementById("casilla"+i).style.background == "white")
+					{
+						document.getElementById("casilla"+i).style.background="green";
+					}
+					else if(document.getElementById("casilla"+i).style.background == "green")
+					{
+						document.getElementById("casilla"+i).style.background="orange";
+					}
+				}
+		}
+		</script>
     </head>
-<<<<<<< HEAD
     <body >
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
@@ -29,12 +44,14 @@
     
 					<div class="listas">
 						<div class="busquedas">
+							<a href="indexEquipos.html">
 							<span class="busquedaNumeros" style="color:#4BB5FF;">Numeros</span>
+							</a>
 							<span class="busquedaEquipos" style="color:white;">Equipos</span>
 						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
-								<a href="Cienes-lista.html" style="background:none;border:none">
+								<a href="cienes0.html" style="background:none;border:none">
 									<span class="listaIzq">
 										00-100
 									</span>
@@ -80,10 +97,10 @@
 								</a>
 							</div>
 						</div>
-						<div class="listaFilas ui-grid-solo">
+						<div class="listaFilaSolo">
 							<div class="ui-block-a" style="padding-left:386px">
 								<a href="Cienes-lista.html" style="background:none;border:none">
-									<span class="listaIzq">
+									<span class="listaCentro">
 										601-700
 									</span>
 								</a>
@@ -102,75 +119,6 @@
 				</div>
 			</div>		
 		</div>
-=======
-    <body class="fondo">
-    <div class='search-view'>
-<input class='search-key' type="text"/>
-<ul class='employee-list'></ul>
-</div>
-        <h1>Tu Lista</h1>
-        <div style="text-align:center">
-    
-            <div class="listas">
-                <div class="busquedas">
-                    <span class="busquedaNumeros" style="color:#4BB5FF;">Numeros</span>
-                    <span class="busquedaEquipos" style="color:white;">Equipos</span>
-                </div>
-                <div class="listaFilas">
-				<div class='header'><h1>Home</h1></div>
-
-                    <span class="listaIzq">
-                        00-100
-                    </span>
-                    <span class="listaDer">
-                        101-200
-                    </span>
-                </div>
-                <div class="listaFilas">
-                    <span class="listaIzq">
-                        201-300
-                    </span>
-                    <span class="listaDer">
-                        301-400
-                    </span>
-                </div>
-                <div class="listaFilas">
-
-                    <span class="listaIzq">
-                        401-500
-                    </span>
-                    <span class="listaDer">
-                        501-600
-                    </span>
-                </div>
-                <div class="listaFilaSolo">
-                    <span class="listaCentro">
-                        601-700
-                    </span>
-                </div>
-                
-                
-
-            </div>
-			
-			            <div data-role="footer" data-id="persistantFooter" data-position="fixed">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="html/crearbolsillo.html" data-transition="slideup" data-icon="gear">Crear bolsillo</a></li>
-                        <li><a href="html/registrarmovimiento.html"        		data-transition="slideup" data-icon="gear">Registrar movimiento de caja</a></li>
-                        <li><a href="html/registrardeuda.html"       	 data-transition="slideup" data-icon="gear">Registrar deuda</a></li>
-                        <li><a href="html/pagardeuda.html"        data-transition="slideup" data-icon="gear">Pagar deuda</a></li>
-                        <li><a href="html/transferirdinero.html"      	data-transition="slideup" data-icon="grid">Transferir dinero</a></li>
-                        <li><a href="html/verificarbalance.html"      data-transition="slideup" data-icon="grid">Verificar balance</a></li>
-                        <li><a href="html/consultarmovimientos.html" data-transition="slideup" data-icon="search">Consultar movimientos</a></li>
-                        <li><a href="html/generarreporte.html" data-transition="slideup" data-icon="search">Generar Reporte de caja</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-           
-        </div>    
->>>>>>> 73040f099f9bbaf603a36b7d1830aa2a8deb4e5e
     </body>
 </html>
 
