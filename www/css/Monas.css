@@ -201,3 +201,23 @@
 				background:#E8E510;
 				border-color: #E8E510;
 			}
+			
+			div.casillas
+			{
+				text-align:center;
+				border:1px;
+				border-style:solid;
+				border-color:black;
+				background-color:white;
+				background:white;
+				width:35px;
+				height:20px;
+				float:left;
+			}
+			
+			div.cambioFila 
+			{
+    			margin-bottom: 0px;
+    			padding: 0px;
+    			clear:both;
+			}
