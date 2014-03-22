@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/pruebas.js"></script>
     </head>
     <body >
  <!--   <div class='search-view'> 
@@ -70,43 +71,11 @@
 
   <script>
   		
-		var numCasillas = 100;
-   		for(var i=0; i <= numCasillas;i++)
-     	{
-     	    document.write("<a onclick='CambioEstadoMona("+i+");return false;'>");
-   			document.write("<div id = 'casilla"+i+"' class='casillas' style='background:white;color:black'>"+i);
-   		    document.write("</div>");
-   			document.write("</a>");
-		}
-		
-function CambioEstadoMona(i)
-{
-	if(document.getElementById("estadoLista").title == "cambio")
-		{
-		if(document.getElementById("casilla"+i).style.background == "white")
-		{
-			document.getElementById("casilla"+i).style.background="green";
-		}
-		else if(document.getElementById("casilla"+i).style.background == "green")
-		{
-			document.getElementById("casilla"+i).style.background="orange";
-		}
-	}
-}
+  	inicializarCasillas(casillaInicial)	
+  	
 
-function Actualizar()
-{
-	if(document.getElementById("estadoLista").title == "cambio")
-	{
-		document.getElementById("estadoLista").title="bloqueado";
-		document.getElementById("btnEstado").value="Actualizar";
-	}
-	else if(document.getElementById("estadoLista").title == "bloqueado")
-	{
-		document.getElementById("estadoLista").title="cambio";
-		document.getElementById("btnEstado").value="Listo";
-	}
-}
+
+
   </script>
 			</div>
 			<div data-role="footer" data-position="fixed">
