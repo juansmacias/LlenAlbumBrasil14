@@ -1,4 +1,7 @@
-		body.fondo
+
+			
+			
+			body.fondo
 			{
 				text-align:center;
 				color:black;
@@ -131,9 +134,9 @@
 			    position:relative;
 			    text-align:center;
 			    border-color:white;
-			    border:2px solid black;
+			    border:2px solid none;
 			    color:black;
-			    width:70%;
+			    width:90%;
 			    height:70px;
 			    border-radius:25px;
 			    top:10%;
@@ -145,9 +148,9 @@
 			    position:relative;
 			    text-align:center;
 			    border-color:white;
-			    border:2px solid black;
+			    border:2px solid none;
 			    color:black;
-			    width:70%;
+			    width:30%;
 			    height:70px;
 			    border-radius:25px;
 			    top:10%;
@@ -191,12 +194,10 @@
 			    border-radius:25px;
 			    float:right;
 			    margin-right:auto;
-			    margin-left:auto;
-		
-                
+			    margin-left:auto; 
 			}
-			
-	.monas-footer-item{
-	background:#E8E510;
-	border-color: #E8E510;
-	}
+			.monas-footer-item
+			{
+				background:#E8E510;
+				border-color: #E8E510;
+			}
