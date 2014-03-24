@@ -1,25 +1,28 @@
 
- function CambioEstadoMona(i)
+function CambioEstadoMona(i)
 {
+
+	var casillaCambio = "casilla" + i;
+	
 	//if(document.getElementById("estadoLista").title == "cambio")
 	//	{
-		if(document.getElementById("casilla"+i).style.background == "white")
+		if(document.getElementById(casillaCambio).style.background == "white")
 		{
-			document.getElementById("casilla"+i).style.background="green";
+			document.getElementById(casillaCambio).style.background="green";
 		}
-		else if(document.getElementById("casilla"+i).style.background == "green")
+		else if(document.getElementById(casillaCambio).style.background == "green")
 		{
-			document.getElementById("casilla"+i).style.background="orange";
+			document.getElementById(casillaCambio).style.background="orange";
 		}
-		else if(document.getElementById("casilla"+i).style.background == "orange")
+		else if(document.getElementById(casillaCambio).style.background == "orange")
 		{
-			document.getElementById("casilla"+i).style.background="white";
+			document.getElementById(casillaCambio).style.background="white";
 		}
 	//}
 }
 
 
-function Actualizar()
+/*function Actualizar()
 {
 	if(document.getElementById("estadoLista").title == "cambio")
 	{
@@ -32,30 +35,31 @@ function Actualizar()
 		document.getElementById("btnEstado").value="Listo";
 	}
 }
-
-  	function inicializarCasillas(casillaInicial)	
+*/
+  	function inicializarCasillas(casillaInicialParam)	
   	{
-		if(casillaInicial==0)
+  		var casillaInicial = casillaInicialParam + ""
+		if(casillaInicial=="0")
 		{
 			var numCasillas=100;
 		}
-		else if(casillaInicial==101)
+		else if(casillaInicial=="101")
 		{
 			var numCasillas=200;
 		}
-		else if(casillaInicial==201)
+		else if(casillaInicial=="201")
 		{
 			var numCasillas=300;
 		}
-		else if(casillaInicial==301)
+		else if(casillaInicial=="301")
 		{
 			var numCasillas=400;
 		}
-		else if(casillaInicial==401)
+		else if(casillaInicial=="401")
 		{
 			var numCasillas=500;
 		}
-		else if(casillaInicial==501)
+		else if(casillaInicial=="501")
 		{
 			var numCasillas=600;
 		}
@@ -66,8 +70,8 @@ function Actualizar()
 
    		for(var i=casillaInicial; i <= numCasillas;i++)
      	{
-     	    
-   			document.write("<div id = 'casilla"+i+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+i+");return false;'>"+i);
+     	    var casillaNueva = "casilla" + i
+   			document.write("<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+i+");'>"+i);
    		    document.write("</div>");
    			
 		}
