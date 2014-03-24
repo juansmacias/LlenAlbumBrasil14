@@ -66,9 +66,9 @@ function Actualizar()
 
    		for(var i=casillaInicial; i <= numCasillas;i++)
      	{
-     	    document.write("<a onclick='CambioEstadoMona("+i+");return false;'>");
-   			document.write("<div id = 'casilla"+i+"' class='casillas' style='background:white;color:black'>"+i);
+     	    
+   			document.write("<div id = 'casilla"+i+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+i+");return false;'>"+i);
    		    document.write("</div>");
-   			document.write("</a>");
+   			
 		}
 	}	
