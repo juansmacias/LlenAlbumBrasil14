@@ -1,8 +1,8 @@
 
  function CambioEstadoMona(i)
 {
-	if(document.getElementById("estadoLista").title == "cambio")
-		{
+	//if(document.getElementById("estadoLista").title == "cambio")
+	//	{
 		if(document.getElementById("casilla"+i).style.background == "white")
 		{
 			document.getElementById("casilla"+i).style.background="green";
@@ -11,7 +11,11 @@
 		{
 			document.getElementById("casilla"+i).style.background="orange";
 		}
-	}
+		else if(document.getElementById("casilla"+i).style.background == "orange")
+		{
+			document.getElementById("casilla"+i).style.background="white";
+		}
+	//}
 }
 
 
