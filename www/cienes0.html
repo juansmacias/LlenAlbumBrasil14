@@ -64,7 +64,7 @@
     </div>
 -->
 
-<div id = 'casilla00' class='casillas' onclick='CambioEstadoMona("00"); 'style='background:white;color:black'>
+<div id = 'casilla00' class='casillas' onclick='CambioEstadoMonas("00"); 'style='background:white;color:black'>
 00
 </div>
 
@@ -73,7 +73,27 @@
   <script>
   		
   	//inicializarCasillas(0)	
-  	
+  	function CambioEstadoMonas(i)
+{
+
+	var casillaCambio = "casilla" + i;
+	
+	//if(document.getElementById("estadoLista").title == "cambio")
+	//	{
+		if(document.getElementById(casillaCambio).style.background == "white")
+		{
+			document.getElementById(casillaCambio).style.background="green";
+		}
+		else if(document.getElementById(casillaCambio).style.background == "green")
+		{
+			document.getElementById(casillaCambio).style.background="orange";
+		}
+		else if(document.getElementById(casillaCambio).style.background == "orange")
+		{
+			document.getElementById(casillaCambio).style.background="white";
+		}
+	//}
+}
 
 
 
