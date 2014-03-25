@@ -9,6 +9,29 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+		<script>
+		  	function CambioEstadoMonas(i)
+			{
+
+				var casillaCambio = "casilla" + i;
+	
+			//if(document.getElementById("estadoLista").title == "cambio")
+			//	{
+				if(document.getElementById(casillaCambio).style.background == "white")
+				{
+					document.getElementById(casillaCambio).style.background="green";
+				}
+				else if(document.getElementById(casillaCambio).style.background == "green")
+				{
+					document.getElementById(casillaCambio).style.background="orange";
+				}
+				else if(document.getElementById(casillaCambio).style.background == "orange")
+				{
+					document.getElementById(casillaCambio).style.background="white";
+				}
+			//}
+}
+		</script>
     </head>
     <body >
  <!--   <div class='search-view'> 
@@ -79,33 +102,7 @@ for(var i=casillaInicial; i <= numCasillas;i++)
    			
 		}
 	document.write(total);
-
-
   	//inicializarCasillas(0)	
-  	function CambioEstadoMonas(i)
-{
-
-	var casillaCambio = "casilla" + i;
-	
-	//if(document.getElementById("estadoLista").title == "cambio")
-	//	{
-		if(document.getElementById(casillaCambio).style.background == "white")
-		{
-			document.getElementById(casillaCambio).style.background="green";
-		}
-		else if(document.getElementById(casillaCambio).style.background == "green")
-		{
-			document.getElementById(casillaCambio).style.background="orange";
-		}
-		else if(document.getElementById(casillaCambio).style.background == "orange")
-		{
-			document.getElementById(casillaCambio).style.background="white";
-		}
-	//}
-}
-
-
-
   </script>
 			</div>
 			<div data-role="footer" data-position="fixed">
