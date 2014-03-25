@@ -1,5 +1,5 @@
 
-function CambioEstadoMona(i)
+function CambioEstadoMonasa(i)
 {
 
 	var casillaCambio = "casilla" + i;
