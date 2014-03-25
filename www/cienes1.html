@@ -9,6 +9,7 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+
     </head>
     <body >
  <!--   <div class='search-view'> 
@@ -17,7 +18,7 @@
 </div> -->
 		<div data-role="page">
 			<div data-role="header" data-position="fixed">
-				<h1 id="titulo">101 - 200</h1>
+				<h1 id="titulo">00 - 100</h1>
 			</div>
 			<div data-role="main" class="ui-content">
 			<div style='margin-bottom:0px;'>
@@ -64,14 +65,31 @@
     </div>
 -->
 
-  <script>
-  		
-  	inicializarCasillas(101)	
-  	
+<div id = 'casilla00' class='casillas' onclick='CambioEstadoMona("00"); 'style='background:white;color:black'>00</div>
+<div id = 'casilla0' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(0);'>0</div>
+		<script>
+		  	function CambioEstadoMona(i)
+			{
 
-
-
-  </script>
+				var casillaCambio = "casilla" + i;
+	
+			//if(document.getElementById("estadoLista").title == "cambio")
+			//	{
+				if(document.getElementById(casillaCambio).style.background == "white")
+				{
+					document.getElementById(casillaCambio).style.background="green";
+				}
+				else if(document.getElementById(casillaCambio).style.background == "green")
+				{
+					document.getElementById(casillaCambio).style.background="orange";
+				}
+				else if(document.getElementById(casillaCambio).style.background == "orange")
+				{
+					document.getElementById(casillaCambio).style.background="white";
+				}
+			//}
+}
+		</script>
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
