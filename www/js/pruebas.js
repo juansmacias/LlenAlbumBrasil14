@@ -21,6 +21,14 @@ function CambioEstadoMona(i)
 	//}
 }
 
+function inicializarMonas()
+{
+var casillaNueva = "casilla" + 1;
+	document.write("<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+1+");'>"+1);
+   		    document.write("</div>");
+
+}
+
 
 /*function Actualizar()
 {
@@ -70,7 +78,7 @@ function CambioEstadoMona(i)
 
    		for(var i=casillaInicial; i <= numCasillas;i++)
      	{
-     	    var casillaNueva = "casilla" + i
+     	    var casillaNueva = "casilla" + i;
    			document.write("<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+i+");'>"+i);
    		    document.write("</div>");
    			
