@@ -69,13 +69,17 @@
 </div>
 
 <script>
+var total = "";
+casillaInicial = 0;
+numCasillas = 100;
+for(var i=casillaInicial; i <= numCasillas;i++)
+     	{
+     	    var casillaNueva = "casilla" + i;
+   			total= total + "<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+i+");'>"+i+"</div>";
+   			
+		}
+	document.write(total);
 
-var casillaNueva = "casilla" + 1;
-	//document.write("<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+1+");'>"+1);
-   	//	    document.write("</div>");
-
-var linea = "<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+1+");'>"+1+"</div>";
-document.write(linea);
 
   	//inicializarCasillas(0)	
   	function CambioEstadoMonas(i)
