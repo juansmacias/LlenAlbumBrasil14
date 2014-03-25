@@ -9,15 +9,6 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
-		  <script>
-function inicializarMona()
-{
-var casillaNueva = "casilla" + 1;
-	document.write("<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+1+");'>"+1);
-   		    document.write("</div>");
-
-}
-</script>
     </head>
     <body >
  <!--   <div class='search-view'> 
@@ -78,8 +69,10 @@ var casillaNueva = "casilla" + 1;
 </div>
 
 <script>
-inicializarMona()
 
+var casillaNueva = "casilla" + 1;
+	document.write("<div id = '"+casillaNueva+"' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona("+1+");'>"+1);
+   		    document.write("</div>");
 
 
   	//inicializarCasillas(0)	
