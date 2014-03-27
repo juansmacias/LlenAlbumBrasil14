@@ -3271,7 +3271,8 @@ if ( !$.support.boxShadow ) {
 
 var dataPropertyName = "virtualMouseBindings",
 	touchTargetPropertyName = "virtualTouchID",
-	virtualEventNames = "vmouseover vmousedown vmousemove vmouseup vclick vmouseout vmousecancel".split( " " ),
+	virtualEventNames = "vmouseover vmousedown vmousemove vmouseup vmouseout vmousecancel".split( " " ),	
+	//virtualEventNames = "vmouseover vmousedown vmousemove vmouseup vclick vmouseout vmousecancel".split( " " ),
 	touchEventProps = "clientX clientY pageX pageY screenX screenY".split( " " ),
 	mouseHookProps = $.event.mouseHooks ? $.event.mouseHooks.props : [],
 	mouseEventProps = $.event.props.concat( mouseHookProps ),

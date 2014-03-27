@@ -4,22 +4,31 @@
 		<link rel ='stylesheet' href="css/Monas.css">
  		<link rel='stylesheet' href="css/jquery.mobile-1.4.2.css">
 		<link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">   
+		<link rel="stylesheet" href="css/fb.css">
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
+		
     </head>
     <body >
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul> 
+El rgb del verde biche es: #a2e83f y esta en el monas-jquery....css
 </div> -->
 		<div data-role="page" class="ui-page-theme-b">
 			<div data-role="header" data-position="fixed">
 				<h1 id="titulo">Mi Perfil</h1>
 			</div>
 			<div data-role="main" class="ui-content">
-		
+				<form action="index.html" class="login">
+ 	   				<h1>Facebook</h1>
+    				<input type="email" name="email" class="login-input" placeholder="Email Address" autofocus>
+	    			<input type="password" name="password" class="login-input" placeholder="Password">
+    				<input type="submit" value="Login" class="login-submit">
+    				<p class="login-help"><a href="index.html">Forgot password?</a></p>
+  				</form>
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
