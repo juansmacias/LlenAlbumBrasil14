@@ -176,18 +176,46 @@
 				if(document.getElementById(casillaCambio).style.background == "white")
 				{
 					document.getElementById(casillaCambio).style.background="green";
+					window.localStorage.setItem(casillaCambio,"tiene");
 				}
 				else if(document.getElementById(casillaCambio).style.background == "green")
 				{
 					document.getElementById(casillaCambio).style.background="orange";
+					window.localStorage.setItem(casillaCambio,"repetida");
 				}
 				else if(document.getElementById(casillaCambio).style.background == "orange")
 				{
 					document.getElementById(casillaCambio).style.background="white";
+					window.localStorage.removeItem(casillaCambio);
 				}
 			//}
-}
+			}
 		</script>
+		<script> 
+
+		function cargarEstado(i)
+		{
+				//alert (window.localStorage.getItem("casilla00"));
+				var estadoCasilla = "casilla" + i;
+				
+				var estado = window.localStorage.getItem(estadoCasilla);
+				if(estado =="tiene")
+				{
+					document.getElementById(estadoCasilla).style.background="green";
+				}
+				else if (estado =="repetida")
+				{
+					document.getElementById(estadoCasilla).style.background="orange";
+				}
+				else
+				{
+					document.getElementById(estadoCasilla).style.background="white";
+				}
+			}
+			
+
+		</script> 
+		
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -197,6 +225,13 @@
 					</ul>					
 				</div>
 			</div>
-		</div>		
+		</div>
+		<script type="text/javascript">
+
+			for(var j=601; j<701;j++)
+			{
+				cargarEstado(j);
+			}
+		</script>		
 	</body>
 </html>

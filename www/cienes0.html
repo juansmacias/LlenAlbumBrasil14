@@ -30,42 +30,12 @@
 		</div> 
 	</div>
 	<br>
-	<!--<input class ='ui-btn-active'type='submit' id='btnEstado' onclick='Actualizar()' value='Actualizar'>
+	<!-- <input class ='ui-btn-active'type='submit' id='btnEstado' onclick='Actualizar()' value='Actualizar'>
 	-->
-	<br>
-	<br>
 	<br>
 	<div id='estadoLista' title='bloqueado'></div>
 	
-<!--   Ejemplo para hacerlo por un número fijo de filas 
-	<div class='cambioFila'>
-	
-    	<div id='casiila1' class='casillas'>
-    		100
-	    </div>
-    	<div id='casiila2' class='casillas'>
-    		101
-	    </div>
-    	<div id='casiila1' class='casillas'>
-    		200
-    	</div>
-
-    </div>
-    <div class='cambioFila'>
-    
-    	<div id='casiila1' class='casillas'>
-    		100
-    	</div>
-    	<div id='casiila2' class='casillas'>
-    		101
-    	</div>
-    	<div id='casiila1' class='casillas'>
-    		200
-    	</div>
-    </div>
--->
-
-<div id = 'casilla00' class='casillas'style='background:white;color:black' onload='cargarEstado("00")' onclick='CambioEstadoMona("00");'>00</div>
+<div id = 'casilla00' class='casillas'style='background:white;color:black' onclick='CambioEstadoMona("00");'>00</div>
 <div id = 'casilla0' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(0);'>0</div>
 <div id = 'casilla1' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(1);'>1</div>
 <div id = 'casilla2' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(2);'>2</div>
@@ -167,7 +137,7 @@
 <div id = 'casilla98' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(98);'>98</div>
 <div id = 'casilla99' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(99);'>99</div>
 <div id = 'casilla100' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(100);'>100</div>
-			<script>
+		<script>
 		  	function CambioEstadoMona(i)
 			{
 
@@ -178,41 +148,42 @@
 				if(document.getElementById(casillaCambio).style.background == "white")
 				{
 					document.getElementById(casillaCambio).style.background="green";
-					window.localStorage.setItem(casillaGuardar,"tiene");
+					window.localStorage.setItem(casillaCambio,"tiene");
 				}
 				else if(document.getElementById(casillaCambio).style.background == "green")
 				{
 					document.getElementById(casillaCambio).style.background="orange";
-					window.localStorage.setItem(casillaGuardar,"repetida");
+					window.localStorage.setItem(casillaCambio,"repetida");
 				}
 				else if(document.getElementById(casillaCambio).style.background == "orange")
 				{
 					document.getElementById(casillaCambio).style.background="white";
-					window.localStorage.removeItem(casillaGuardar);
+					window.localStorage.removeItem(casillaCambio);
 				}
 			//}
 			}
 		</script>
 		<script> 
 
-			function cargarEstado(i)
-			{ 
+		function cargarEstado(i)
+		{
+				//alert (window.localStorage.getItem("casilla00"));
 				var estadoCasilla = "casilla" + i;
 				
 				var estado = window.localStorage.getItem(estadoCasilla);
 				if(estado =="tiene")
 				{
-					document.getElementById(casillaCambio).style.background="green";
+					document.getElementById(estadoCasilla).style.background="green";
 				}
 				else if (estado =="repetida")
 				{
-					document.getElementById(casillaCambio).style.background="orange";
+					document.getElementById(estadoCasilla).style.background="orange";
 				}
 				else
 				{
-					document.getElementById(casillaCambio).style.background="white";
+					document.getElementById(estadoCasilla).style.background="white";
 				}
-			} 
+			}
 			
 
 		</script> 
@@ -226,6 +197,14 @@
 					</ul>					
 				</div>
 			</div>
-		</div>		
+		</div>
+		<script type="text/javascript">
+				
+			cargarEstado("00");
+			for(var j=0; j<101;j++)
+			{
+				cargarEstado(j);
+			}
+		</script>		
 	</body>
 </html>
