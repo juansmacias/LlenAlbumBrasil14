@@ -141,7 +141,7 @@
 		<script>
 		
 		
-		document.addEventListener("deviceready", CambioEstadoMona,false);
+		//document.addEventListener("deviceready", CambioEstadoMona,false);
 		
 		  	function CambioEstadoMona(i)
 			{
@@ -154,7 +154,7 @@
 				{
 					document.getElementById(casillaCambio).style.background="green";
 					window.localStorage.setItem(casillaCambio,"tiene");
-					alert(window.localStorage.getItem(casillaCambio);
+					alert(window.localStorage.getItem(casillaCambio));
 				}
 				
 				else if(document.getElementById(casillaCambio).style.background == "green")
