@@ -9,29 +9,7 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
-		<script>
-		  	function CambioEstadoMona(i)
-			{
 
-				var casillaCambio = "casilla" + i;
-	
-			//if(document.getElementById("estadoLista").title == "cambio")
-			//	{
-				if(document.getElementById(casillaCambio).style.background == "white")
-				{
-					document.getElementById(casillaCambio).style.background="green";
-				}
-				else if(document.getElementById(casillaCambio).style.background == "green")
-				{
-					document.getElementById(casillaCambio).style.background="orange";
-				}
-				else if(document.getElementById(casillaCambio).style.background == "orange")
-				{
-					document.getElementById(casillaCambio).style.background="white";
-				}
-			//}
-}
-		</script>
     </head>
     <body >
  <!--   <div class='search-view'> 
@@ -189,6 +167,29 @@
 <div id = 'casilla98' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(98);'>98</div>
 <div id = 'casilla99' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(99);'>99</div>
 <div id = 'casilla100' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(100);'>100</div>
+			<script>
+		  	function CambioEstadoMona(i)
+			{
+
+				var casillaCambio = "casilla" + i;
+	
+			//if(document.getElementById("estadoLista").title == "cambio")
+			//	{
+				if(document.getElementById(casillaCambio).style.background == "white")
+				{
+					document.getElementById(casillaCambio).style.background="green";
+				}
+				else if(document.getElementById(casillaCambio).style.background == "green")
+				{
+					document.getElementById(casillaCambio).style.background="orange";
+				}
+				else if(document.getElementById(casillaCambio).style.background == "orange")
+				{
+					document.getElementById(casillaCambio).style.background="white";
+				}
+			//}
+}
+		</script>
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
