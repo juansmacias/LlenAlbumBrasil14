@@ -205,6 +205,7 @@
 			
 			div.casillas
 			{
+				position:relative;
 				text-align:center;
 				border:1px;
 				border-style:solid;
@@ -221,4 +222,11 @@
     			margin-bottom: 0px;
     			padding: 0px;
     			clear:both;
+			}
+			div.container
+			{
+				
+				margin-left:5%;
+				margin-right:3%;
+				border
 			}
