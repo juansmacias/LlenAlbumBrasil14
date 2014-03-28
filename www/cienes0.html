@@ -65,7 +65,7 @@
     </div>
 -->
 
-<div id = 'casilla00' class='casillas'style='background:white;color:black' onclick='CambioEstadoMona("00");'>00</div>
+<div id = 'casilla00' class='casillas'style='background:white;color:black' onload='cargarEstado("00")' onclick='CambioEstadoMona("00");'>00</div>
 <div id = 'casilla0' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(0);'>0</div>
 <div id = 'casilla1' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(1);'>1</div>
 <div id = 'casilla2' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(2);'>2</div>
@@ -178,18 +178,45 @@
 				if(document.getElementById(casillaCambio).style.background == "white")
 				{
 					document.getElementById(casillaCambio).style.background="green";
+					window.localStorage.setItem(casillaGuardar,"tiene");
 				}
 				else if(document.getElementById(casillaCambio).style.background == "green")
 				{
 					document.getElementById(casillaCambio).style.background="orange";
+					window.localStorage.setItem(casillaGuardar,"repetida");
 				}
 				else if(document.getElementById(casillaCambio).style.background == "orange")
 				{
 					document.getElementById(casillaCambio).style.background="white";
+					window.localStorage.removeItem(casillaGuardar);
 				}
 			//}
-}
+			}
 		</script>
+		<script> 
+
+			function cargarEstado(i)
+			{ 
+				var estadoCasilla = "casilla" + i;
+				
+				var estado = window.localStorage.getItem(estadoCasilla);
+				if(estado =="tiene")
+				{
+					document.getElementById(casillaCambio).style.background="green";
+				}
+				else if (estado =="repetida")
+				{
+					document.getElementById(casillaCambio).style.background="orange";
+				}
+				else
+				{
+					document.getElementById(casillaCambio).style.background="white";
+				}
+			} 
+			
+
+		</script> 
+		
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
