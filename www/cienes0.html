@@ -9,6 +9,7 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+		<script src="js/cordova.js"></script>
 
     </head>
     <body >
@@ -174,7 +175,7 @@
 
 		function cargarEstado(i)
 		{
-				alert (window.localStorage.getItem("casilla00"));
+				
 				var estadoCasilla = "casilla" + i;
 				
 				var estado = window.localStorage.getItem(estadoCasilla);
@@ -209,7 +210,7 @@
 		<script type="text/javascript">
 				
 				
-		document.addEventListener("deviceready", cargarEstado,false);
+		document.addEventListener("deviceready", cargarEstado, false);
 
 			cargarEstado("00");
 			for(var j=0; j<101;j++)
