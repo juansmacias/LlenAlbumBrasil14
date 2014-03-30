@@ -180,30 +180,31 @@
 		</script>
 		<script> 
 
-		function cargarEstado(i)
-		{
+			function cargarEstado(i)
+			{
 				
 				var estadoCasilla = "casilla" + i;
 				
 				
 				if(window.localStorage.getItem(estadoCasilla)!=null)
 				{
-				var estado = window.localStorage.getItem(estadoCasilla);
-				if(estado =="tiene")
-				{
-					document.getElementById(estadoCasilla).style.background="green";
-				}
-				else if (estado =="repetida")
-				{
-					document.getElementById(estadoCasilla).style.background="orange";
+					var estado = window.localStorage.getItem(estadoCasilla);
+					if(estado =="tiene")
+					{
+						document.getElementById(estadoCasilla).style.background="green";
+					}
+					else if (estado =="repetida")
+					{
+						document.getElementById(estadoCasilla).style.background="orange";
+					}
+					else
+					{
+						document.getElementById(estadoCasilla).style.background="white";
+					}
 				}
 				else
 				{
-					document.getElementById(estadoCasilla).style.background="white";
-				}
-				}
-				else
-				{
+				
 				}
 			}
 			
