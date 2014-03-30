@@ -14988,7 +14988,6 @@ $.widget( "ui.tabs", {
 
 				$.mobile.changePage( $.mobile.firstPage, {
 					transition: "none",
-					allowSamePageTransition : true,
 					reverse: true,
 					changeHash: false,
 					fromHashChange: true
