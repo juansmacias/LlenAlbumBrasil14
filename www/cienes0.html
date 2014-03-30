@@ -12,7 +12,7 @@
 		<script src="js/cordova.js"></script>
 
     </head>
-    <body >
+    <body onload="cargarEstadosTotales()">
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul> 
@@ -217,13 +217,14 @@
 		<script type="text/javascript">
 				
 				
-		document.addEventListener("deviceready", cargarEstado, false);
-
+		function cargarEstadosTotales()
+		{
 			cargarEstado("00");
 			for(var j=0; j<101;j++)
 			{
 				cargarEstado(j);
 			}
+		}
 		</script>		
 	</body>
 </html>

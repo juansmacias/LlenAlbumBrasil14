@@ -4,16 +4,8 @@
     <list default="true" id="2f3087c9-fa85-40f8-833e-f050d4b5c152" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/www/cienes01.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/www/indexCienes.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes0.html" afterPath="$PROJECT_DIR$/www/cienes0.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes1.html" afterPath="$PROJECT_DIR$/www/cienes1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes2.html" afterPath="$PROJECT_DIR$/www/cienes2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes3.html" afterPath="$PROJECT_DIR$/www/cienes3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes4.html" afterPath="$PROJECT_DIR$/www/cienes4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes5.html" afterPath="$PROJECT_DIR$/www/cienes5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/cienes6.html" afterPath="$PROJECT_DIR$/www/cienes6.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/indexEquipos.html" afterPath="$PROJECT_DIR$/www/indexEquipos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/pruebas.js" afterPath="$PROJECT_DIR$/www/js/pruebas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/main.js" afterPath="$PROJECT_DIR$/www/js/main.js" />
     </list>
     <ignored path="LlenAlbumBrasil14.iws" />
     <ignored path=".idea/workspace.xml" />

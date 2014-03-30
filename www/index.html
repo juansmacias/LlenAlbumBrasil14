@@ -27,7 +27,7 @@
 		}
 		</script>
     </head>
-    <body >
+    <body onload ="ActualizarLleno()">
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul> 
@@ -57,7 +57,7 @@
 								if(window.localStorage.getItem("total")==null)
 								{
 									window.localStorage.setItem("total",0);
-									alert("Bienvenido a Llenalbum2014");
+									alert("Enhorabuena puedes comenzar a llevar el conteo de tus monas", "LlenAlbum2014");
 								}
 								else
 								{
@@ -69,8 +69,11 @@
 							<input type="text" style="text-align:center;" id="completitud"  value="Total: 0%" readonly>  
 							<script>
 								//var porcentaje = calcularCompletitud();
-								var porcentaje = window.localStorage.getItem("total");
-								document.getElementById("completitud").value=("Total: "+porcentaje+"%");
+								function ActualizarLleno()
+								{
+								var porcentaje = window.localStorage.getItem("total")/640*100;
+								document.getElementById("completitud").value=("Completo: "+porcentaje+"%");
+								}
 							</script>
 						</div>
 						<div class="listaFilas ui-grid-a">
