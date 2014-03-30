@@ -155,7 +155,10 @@
 				{
 					document.getElementById(casillaCambio).style.background="green";
 					window.localStorage.setItem(casillaCambio,"tiene");
-					alert(window.localStorage.getItem(casillaCambio));
+					var total = window.localStorage.getItem("total");
+					total++;
+					window.localStorage.setItem("total",total);
+					alert(window.localStorage.getItem("total"));
 				}
 				
 				else if(document.getElementById(casillaCambio).style.background == "green")
@@ -167,6 +170,10 @@
 				{
 					document.getElementById(casillaCambio).style.background="white";
 					window.localStorage.removeItem(casillaCambio);
+					var total = window.localStorage.getItem("total");
+					total --;
+					window.localStorage.setItem("total",total);
+					alert(window.localStorage.getItem("total"));
 				}
 			//}
 			}

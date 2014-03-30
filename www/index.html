@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/pruebas.js"></script>
 		<script>
 		
 		function CambioEstadoMona(i)
@@ -49,6 +50,29 @@
 							
 						</div>
 						-->
+						<div class="completitud">
+							
+							<script>
+								
+								if(window.localStorage.getItem("total")==null)
+								{
+									window.localStorage.setItem("total",0);
+									alert("Bienvenido a Llenalbum2014");
+								}
+								else
+								{
+									//alert(window.localStorage.getItem("total"));
+								}
+
+							</script>
+							
+							<input type="text" style="text-align:center;" id="completitud"  value="Total: 0%" readonly>  
+							<script>
+								//var porcentaje = calcularCompletitud();
+								var porcentaje = window.localStorage.getItem("total");
+								document.getElementById("completitud").value=("Total: "+porcentaje+"%");
+							</script>
+						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
 								<a href="cienes0.html" style="background:none;border:none">
@@ -101,7 +125,7 @@
 							<div class="ui-block-a">
 								<a href="cienes6.html" style="background:none;border:none">
 									<span class="listaCentro">
-										601-700
+										601-639
 									</span>
 								</a>
 							</div>
