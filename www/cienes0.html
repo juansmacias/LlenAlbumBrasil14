@@ -12,7 +12,7 @@
 		<script src="js/cordova.js"></script>
 
     </head>
-    <body onload="cargarEstadosTotales()">
+    <body>
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul> 
@@ -185,6 +185,9 @@
 				
 				var estadoCasilla = "casilla" + i;
 				
+				
+				if(window.localStorage.getItem(estadoCasilla)!=null)
+				{
 				var estado = window.localStorage.getItem(estadoCasilla);
 				if(estado =="tiene")
 				{
@@ -197,6 +200,10 @@
 				else
 				{
 					document.getElementById(estadoCasilla).style.background="white";
+				}
+				}
+				else
+				{
 				}
 			}
 			
@@ -225,6 +232,9 @@
 				cargarEstado(j);
 			}
 		}
-		</script>		
+		</script>	
+		<script>
+		$.cargarEstadosTotales()
+		</script>	
 	</body>
 </html>
