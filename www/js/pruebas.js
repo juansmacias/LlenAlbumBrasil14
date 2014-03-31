@@ -28,7 +28,30 @@ var casillaNueva = "casilla" + 1;
    		    document.write("</div>");
 
 }
+function calcularCompletitud()
+{
 
+	var total = 0;
+	var estadoCasilla00 = "casilla00";
+	var estado00 = window.localStorage.getItem(estadoCasilla00);
+	if(estado00 =="tiene"||estado00=="repetida")
+		{
+			total = total +1;
+		}
+	for (var i = 0; i<640;i++)
+	{
+		var estadoCasilla = "casilla" + i;
+		var estado = window.localStorage.getItem(estadoCasilla);
+		if(estado =="tiene"||estado=="repetida")
+		{
+			total = total +1;
+		}
+	}
+	var completitud = (total/640)*100
+	alert(completitud+"%");
+	return (completitud+"%");
+
+}
 
 /*function Actualizar()
 {

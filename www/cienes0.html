@@ -12,7 +12,7 @@
 		<script src="js/cordova.js"></script>
 
     </head>
-    <body >
+    <body>
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul> 
@@ -31,8 +31,8 @@
 		</div> 
 	</div>
 	<br>
-	<!-- <input class ='ui-btn-active'type='submit' id='btnEstado' onclick='Actualizar()' value='Actualizar'>
-	-->
+	 <input class ='ui-btn-active'type='submit' id='btnEstado' onclick='cargarEstadosTotales()' value='Actualizar'>
+	
 	<br>
 	<div id='estadoLista' title='bloqueado'></div>
 	<div class='container'>
@@ -155,7 +155,10 @@
 				{
 					document.getElementById(casillaCambio).style.background="green";
 					window.localStorage.setItem(casillaCambio,"tiene");
-					alert(window.localStorage.getItem(casillaCambio));
+					var total = window.localStorage.getItem("total");
+					total++;
+					window.localStorage.setItem("total",total);
+					alert(window.localStorage.getItem("total"));
 				}
 				
 				else if(document.getElementById(casillaCambio).style.background == "green")
@@ -167,29 +170,41 @@
 				{
 					document.getElementById(casillaCambio).style.background="white";
 					window.localStorage.removeItem(casillaCambio);
+					var total = window.localStorage.getItem("total");
+					total --;
+					window.localStorage.setItem("total",total);
+					alert(window.localStorage.getItem("total"));
 				}
 			//}
 			}
 		</script>
 		<script> 
 
-		function cargarEstado(i)
-		{
+			function cargarEstado(i)
+			{
 				
 				var estadoCasilla = "casilla" + i;
 				
-				var estado = window.localStorage.getItem(estadoCasilla);
-				if(estado =="tiene")
+				
+				if(window.localStorage.getItem(estadoCasilla)!=null)
 				{
-					document.getElementById(estadoCasilla).style.background="green";
-				}
-				else if (estado =="repetida")
-				{
-					document.getElementById(estadoCasilla).style.background="orange";
+					var estado = window.localStorage.getItem(estadoCasilla);
+					if(estado =="tiene")
+					{
+						document.getElementById(estadoCasilla).style.background="green";
+					}
+					else if (estado =="repetida")
+					{
+						document.getElementById(estadoCasilla).style.background="orange";
+					}
+					else
+					{
+						document.getElementById(estadoCasilla).style.background="white";
+					}
 				}
 				else
 				{
-					document.getElementById(estadoCasilla).style.background="white";
+				
 				}
 			}
 			
@@ -209,14 +224,19 @@
 		</div>
 		<script type="text/javascript">
 				
-				
-		document.addEventListener("deviceready", cargarEstado, false);
-
+		function cargarEstadosTotales()
+		{
 			cargarEstado("00");
 			for(var j=0; j<101;j++)
 			{
 				cargarEstado(j);
 			}
-		</script>		
+		}
+		</script>	
+		<script>
+			$(document).ready(function(){
+    			cargarEstadosTotales();
+			});
+		</script>	
 	</body>
 </html>

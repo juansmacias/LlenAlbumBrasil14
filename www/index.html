@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/pruebas.js"></script>
 		<script>
 		
 		function CambioEstadoMona(i)
@@ -26,7 +27,7 @@
 		}
 		</script>
     </head>
-    <body >
+    <body>
  <!--   <div class='search-view'> 
 <input class='search-key' type="text"/>
 <ul class='employee-list'></ul> 
@@ -49,6 +50,32 @@
 							
 						</div>
 						-->
+						<div class="completitud">
+							
+							<script>
+								
+								if(window.localStorage.getItem("total")==null)
+								{
+									window.localStorage.setItem("total",0);
+									alert("Enhorabuena puedes comenzar a llevar el conteo de tus monas", "LlenAlbum2014");
+								}
+								else
+								{
+									//alert(window.localStorage.getItem("total"));
+								}
+
+							</script>
+							
+							<input type="text" style="text-align:center;" id="completitud"  value="Total: 0%" readonly>  
+							<script>
+								//var porcentaje = calcularCompletitud();
+								function ActualizarLleno()
+								{
+								var porcentaje = window.localStorage.getItem("total")/640*100;
+								document.getElementById("completitud").value=("Completo: "+porcentaje+"%");
+								}
+							</script>
+						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
 								<a href="cienes0.html" style="background:none;border:none">
@@ -101,7 +128,7 @@
 							<div class="ui-block-a">
 								<a href="cienes6.html" style="background:none;border:none">
 									<span class="listaCentro">
-										601-700
+										601-639
 									</span>
 								</a>
 							</div>
@@ -111,7 +138,7 @@
 						<div data-role="navbar">
 							<ul>
 								<!--<li><a href="perfil.html" data-transition="slideup" data-icon="home">Mi Perfil</a></li>-->
-								<li><a class="ui-btn-active" href="index.html" data-transition="slideup" data-icon="grid">Ver Listas</a></li>
+								<li><a href="index.html" data-transition="slideup" data-icon="grid">Ver Listas</a></li>
 								<!--<li><a href="html/Intercambio.html" data-transition="slideup" data-icon="location">Intercambio</a></li> -->
 							</ul>					
 						</div> 
@@ -119,6 +146,12 @@
 				</div>
 			</div>		
 		</div>
+		<script>
+			$(document).ready(function(){
+   		 		var porcentaje = window.localStorage.getItem("total")/640*100;
+				document.getElementById("completitud").value=("Completo: "+porcentaje+"%");
+			});	
+		</script>
     </body>
 </html>
 
