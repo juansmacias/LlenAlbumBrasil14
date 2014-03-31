@@ -31,8 +31,8 @@
 		</div> 
 	</div>
 	<br>
-	<!-- <input class ='ui-btn-active'type='submit' id='btnEstado' onclick='Actualizar()' value='Actualizar'>
-	-->
+	 <input class ='ui-btn-active'type='submit' id='btnEstado' onclick='cargarEstadosTotales()' value='Actualizar'>
+	
 	<br>
 	<div id='estadoLista' title='bloqueado'></div>
 	<div class='container'>
@@ -224,19 +224,6 @@
 		</div>
 		<script type="text/javascript">
 				
-				$(document).ready(function(){
-    
-         $.messager.show({  
-            title:'My Title',  
-            msg:'The message content',  
-            showType:'fade',  
-            style:{  
-                right:'',  
-                bottom:''  
-            
-        });  
-    });
-});
 		function cargarEstadosTotales()
 		{
 			cargarEstado("00");
@@ -247,9 +234,9 @@
 		}
 		</script>	
 		<script>
-		$(document).ready(function(){
-    cargarEstadosTotales();
-});
+			$(document).ready(function(){
+    			cargarEstadosTotales();
+			});
 		</script>	
 	</body>
 </html>
