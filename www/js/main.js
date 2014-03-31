@@ -1,17 +1,51 @@
 var app = {
 
-    findByName: function() {
-        console.log('findByName');
-        this.store.findByName($('.search-key').val(), function(employees) {
-            var l = employees.length;
-            var e;
-            $('.employee-list').empty();
-            for (var i=0; i<l; i++) {
-                e = employees[i];
-                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
-            }
+    MarcarMona: function(idMona) {
+        this.store.MarcarMona(idMona,function(EstadoMona) {
+            if(EstadoMona == null)
+                document.getElementById(idMona).style.background="white"
+            else if (EstadoMona == 'tiene')
+                document.getElementById(idMona).style.background="green"
+            else
+                document.getElementById(idMona).style.background="orange"
         });
     },
+    darEstadoPorId: function(idMona)
+    {
+      return this.store.darEstadoPorId(idMona);
+    },
+
+    cargarEstado: function(casillaInicial, casillaFinal){
+        this.store.cargarEstado(casillaInicial, casillaFinal,function(resultado)
+        {
+            debugger;
+             var monasCargar = eval ("(" + resultado + ")");
+            var l = monasCargar.length;
+            var mona;
+            var color;
+            for (var i=0; i<l; i++) {
+                mona = monasCargar[i];
+
+                if(mona.estado == 'repetida')
+                    color = 'orange';
+                else if (mona.estado == 'tiene')
+                    color = 'green';
+                else
+                    color = 'white';
+
+                if(mona.casilla =='00')
+                {
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black">'+mona.casilla+'</div>');
+                }
+                else
+                {
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black">'+mona.casilla+'</div>');
+                }
+            }
+        });
+
+    },
+
 	showAlert: function (message, title) {
     if (navigator.notification) {
         navigator.notification.alert(message, null, title, 'OK');
@@ -22,11 +56,7 @@ var app = {
 
     initialize: function() {
 		var self = this; 
-        this.store = new LocalStorageStore(function()
-		{
-			//self.showAlert('Store Initialized', 'Info');
-		});
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
+        this.store = new LocalStorageStore();
     }
 
 };

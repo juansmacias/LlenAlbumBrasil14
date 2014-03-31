@@ -9,13 +9,34 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+        <script type="text/javascript">
 
+            document.addEventListener("deviceready", onDeviceReady,false);
+
+            function onDeviceReady() {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $('.casillas').click(function()
+                {
+                    debugger;
+                    alert(this.id);
+                    app.MarcarMona(this.id)
+                });
+
+            }
+
+            $(function()
+            {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $(".container").on('click', '.casillas', function()
+                {
+                    app.MarcarMona(this.id)
+                });
+            });
+        </script>
     </head>
     <body >
- <!--   <div class='search-view'> 
-<input class='search-key' type="text"/>
-<ul class='employee-list'></ul> 
-</div> -->
 		<div data-role="page">
 			<div data-role="header" data-position="fixed">
 				<h1 id="titulo">601 - 639</h1>
@@ -35,126 +56,8 @@
 	<br>
 
 	<div id='estadoLista' title='bloqueado'></div>
-	
-<!--   Ejemplo para hacerlo por un número fijo de filas 
-	<div class='cambioFila'>
-	
-    	<div id='casiila1' class='casillas'>
-    		100
-	    </div>
-    	<div id='casiila2' class='casillas'>
-    		101
-	    </div>
-    	<div id='casiila1' class='casillas'>
-    		200
-    	</div>
-
-    </div>
-    <div class='cambioFila'>
-    
-    	<div id='casiila1' class='casillas'>
-    		100
-    	</div>
-    	<div id='casiila2' class='casillas'>
-    		101
-    	</div>
-    	<div id='casiila1' class='casillas'>
-    		200
-    	</div>
-    </div>
--->
 <div class='container'>
-<div id = 'casilla601' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(601);'>601</div>
-<div id = 'casilla602' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(602);'>602</div>
-<div id = 'casilla603' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(603);'>603</div>
-<div id = 'casilla604' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(604);'>604</div>
-<div id = 'casilla605' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(605);'>605</div>
-<div id = 'casilla606' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(606);'>606</div>
-<div id = 'casilla607' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(607);'>607</div>
-<div id = 'casilla608' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(608);'>608</div>
-<div id = 'casilla609' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(609);'>609</div>
-<div id = 'casilla610' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(610);'>610</div>
-<div id = 'casilla611' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(611);'>611</div>
-<div id = 'casilla612' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(612);'>612</div>
-<div id = 'casilla613' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(613);'>613</div>
-<div id = 'casilla614' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(614);'>614</div>
-<div id = 'casilla615' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(615);'>615</div>
-<div id = 'casilla616' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(616);'>616</div>
-<div id = 'casilla617' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(617);'>617</div>
-<div id = 'casilla618' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(618);'>618</div>
-<div id = 'casilla619' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(619);'>619</div>
-<div id = 'casilla620' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(620);'>620</div>
-<div id = 'casilla621' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(621);'>621</div>
-<div id = 'casilla622' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(622);'>622</div>
-<div id = 'casilla623' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(623);'>623</div>
-<div id = 'casilla624' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(624);'>624</div>
-<div id = 'casilla625' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(625);'>625</div>
-<div id = 'casilla626' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(626);'>626</div>
-<div id = 'casilla627' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(627);'>627</div>
-<div id = 'casilla628' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(628);'>628</div>
-<div id = 'casilla629' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(629);'>629</div>
-<div id = 'casilla630' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(630);'>630</div>
-<div id = 'casilla631' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(631);'>631</div>
-<div id = 'casilla632' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(632);'>632</div>
-<div id = 'casilla633' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(633);'>633</div>
-<div id = 'casilla634' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(634);'>634</div>
-<div id = 'casilla635' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(635);'>635</div>
-<div id = 'casilla636' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(636);'>636</div>
-<div id = 'casilla637' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(637);'>637</div>
-<div id = 'casilla638' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(638);'>638</div>
-<div id = 'casilla639' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(639);'>639</div>
 		</div>
-		<script>
-		  	function CambioEstadoMona(i)
-			{
-
-				var casillaCambio = "casilla" + i;
-	
-			//if(document.getElementById("estadoLista").title == "cambio")
-			//	{
-				if(document.getElementById(casillaCambio).style.background == "white")
-				{
-					document.getElementById(casillaCambio).style.background="green";
-					window.localStorage.setItem(casillaCambio,"tiene");
-				}
-				else if(document.getElementById(casillaCambio).style.background == "green")
-				{
-					document.getElementById(casillaCambio).style.background="orange";
-					window.localStorage.setItem(casillaCambio,"repetida");
-				}
-				else if(document.getElementById(casillaCambio).style.background == "orange")
-				{
-					document.getElementById(casillaCambio).style.background="white";
-					window.localStorage.removeItem(casillaCambio);
-				}
-			//}
-			}
-		</script>
-		<script> 
-
-		function cargarEstado(i)
-		{
-				//alert (window.localStorage.getItem("casilla00"));
-				var estadoCasilla = "casilla" + i;
-				
-				var estado = window.localStorage.getItem(estadoCasilla);
-				if(estado =="tiene")
-				{
-					document.getElementById(estadoCasilla).style.background="green";
-				}
-				else if (estado =="repetida")
-				{
-					document.getElementById(estadoCasilla).style.background="orange";
-				}
-				else
-				{
-					document.getElementById(estadoCasilla).style.background="white";
-				}
-			}
-			
-
-		</script> 
-		
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -166,12 +69,5 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-
-			for(var j=601; j<640;j++)
-			{
-				cargarEstado(j);
-			}
-		</script>		
 	</body>
 </html>

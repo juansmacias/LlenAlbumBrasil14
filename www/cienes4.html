@@ -9,7 +9,32 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+        <script type="text/javascript">
 
+            document.addEventListener("deviceready", onDeviceReady,false);
+
+            function onDeviceReady() {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $('.casillas').click(function()
+                {
+                    debugger;
+                    alert(this.id);
+                    app.MarcarMona(this.id)
+                });
+
+            }
+
+            $(function()
+            {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $(".container").on('click', '.casillas', function()
+                {
+                    app.MarcarMona(this.id)
+                });
+            });
+        </script>
     </head>
     <body >
  <!--   <div class='search-view'> 
@@ -37,157 +62,7 @@
 	<div id='estadoLista' title='bloqueado'></div>
 
 <div class='container'>
-<div id = 'casilla401' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(401);'>401</div>
-<div id = 'casilla402' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(402);'>402</div>
-<div id = 'casilla403' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(403);'>403</div>
-<div id = 'casilla404' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(404);'>404</div>
-<div id = 'casilla405' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(405);'>405</div>
-<div id = 'casilla406' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(406);'>406</div>
-<div id = 'casilla407' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(407);'>407</div>
-<div id = 'casilla408' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(408);'>408</div>
-<div id = 'casilla409' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(409);'>409</div>
-<div id = 'casilla410' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(410);'>410</div>
-<div id = 'casilla411' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(411);'>411</div>
-<div id = 'casilla412' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(412);'>412</div>
-<div id = 'casilla413' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(413);'>413</div>
-<div id = 'casilla414' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(414);'>414</div>
-<div id = 'casilla415' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(415);'>415</div>
-<div id = 'casilla416' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(416);'>416</div>
-<div id = 'casilla417' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(417);'>417</div>
-<div id = 'casilla418' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(418);'>418</div>
-<div id = 'casilla419' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(419);'>419</div>
-<div id = 'casilla420' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(420);'>420</div>
-<div id = 'casilla421' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(421);'>421</div>
-<div id = 'casilla422' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(422);'>422</div>
-<div id = 'casilla423' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(423);'>423</div>
-<div id = 'casilla424' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(424);'>424</div>
-<div id = 'casilla425' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(425);'>425</div>
-<div id = 'casilla426' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(426);'>426</div>
-<div id = 'casilla427' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(427);'>427</div>
-<div id = 'casilla428' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(428);'>428</div>
-<div id = 'casilla429' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(429);'>429</div>
-<div id = 'casilla430' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(430);'>430</div>
-<div id = 'casilla431' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(431);'>431</div>
-<div id = 'casilla432' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(432);'>432</div>
-<div id = 'casilla433' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(433);'>433</div>
-<div id = 'casilla434' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(434);'>434</div>
-<div id = 'casilla435' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(435);'>435</div>
-<div id = 'casilla436' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(436);'>436</div>
-<div id = 'casilla437' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(437);'>437</div>
-<div id = 'casilla438' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(438);'>438</div>
-<div id = 'casilla439' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(439);'>439</div>
-<div id = 'casilla440' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(440);'>440</div>
-<div id = 'casilla441' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(441);'>441</div>
-<div id = 'casilla442' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(442);'>442</div>
-<div id = 'casilla443' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(443);'>443</div>
-<div id = 'casilla444' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(444);'>444</div>
-<div id = 'casilla445' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(445);'>445</div>
-<div id = 'casilla446' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(446);'>446</div>
-<div id = 'casilla447' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(447);'>447</div>
-<div id = 'casilla448' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(448);'>448</div>
-<div id = 'casilla449' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(449);'>449</div>
-<div id = 'casilla450' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(450);'>450</div>
-<div id = 'casilla451' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(451);'>451</div>
-<div id = 'casilla452' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(452);'>452</div>
-<div id = 'casilla453' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(453);'>453</div>
-<div id = 'casilla454' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(454);'>454</div>
-<div id = 'casilla455' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(455);'>455</div>
-<div id = 'casilla456' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(456);'>456</div>
-<div id = 'casilla457' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(457);'>457</div>
-<div id = 'casilla458' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(458);'>458</div>
-<div id = 'casilla459' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(459);'>459</div>
-<div id = 'casilla460' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(460);'>460</div>
-<div id = 'casilla461' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(461);'>461</div>
-<div id = 'casilla462' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(462);'>462</div>
-<div id = 'casilla463' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(463);'>463</div>
-<div id = 'casilla464' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(464);'>464</div>
-<div id = 'casilla465' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(465);'>465</div>
-<div id = 'casilla466' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(466);'>466</div>
-<div id = 'casilla467' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(467);'>467</div>
-<div id = 'casilla468' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(468);'>468</div>
-<div id = 'casilla469' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(469);'>469</div>
-<div id = 'casilla470' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(470);'>470</div>
-<div id = 'casilla471' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(471);'>471</div>
-<div id = 'casilla472' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(472);'>472</div>
-<div id = 'casilla473' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(473);'>473</div>
-<div id = 'casilla474' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(474);'>474</div>
-<div id = 'casilla475' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(475);'>475</div>
-<div id = 'casilla476' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(476);'>476</div>
-<div id = 'casilla477' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(477);'>477</div>
-<div id = 'casilla478' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(478);'>478</div>
-<div id = 'casilla479' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(479);'>479</div>
-<div id = 'casilla480' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(480);'>480</div>
-<div id = 'casilla481' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(481);'>481</div>
-<div id = 'casilla482' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(482);'>482</div>
-<div id = 'casilla483' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(483);'>483</div>
-<div id = 'casilla484' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(484);'>484</div>
-<div id = 'casilla485' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(485);'>485</div>
-<div id = 'casilla486' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(486);'>486</div>
-<div id = 'casilla487' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(487);'>487</div>
-<div id = 'casilla488' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(488);'>488</div>
-<div id = 'casilla489' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(489);'>489</div>
-<div id = 'casilla490' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(490);'>490</div>
-<div id = 'casilla491' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(491);'>491</div>
-<div id = 'casilla492' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(492);'>492</div>
-<div id = 'casilla493' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(493);'>493</div>
-<div id = 'casilla494' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(494);'>494</div>
-<div id = 'casilla495' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(495);'>495</div>
-<div id = 'casilla496' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(496);'>496</div>
-<div id = 'casilla497' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(497);'>497</div>
-<div id = 'casilla498' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(498);'>498</div>
-<div id = 'casilla499' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(499);'>499</div>
-<div id = 'casilla500' class='casillas' style='background:white;color:black' onclick='CambioEstadoMona(500);'>500</div>
 		</div>
-		<script>
-		  	function CambioEstadoMona(i)
-			{
-
-				var casillaCambio = "casilla" + i;
-	
-			//if(document.getElementById("estadoLista").title == "cambio")
-			//	{
-				if(document.getElementById(casillaCambio).style.background == "white")
-				{
-					document.getElementById(casillaCambio).style.background="green";
-					window.localStorage.setItem(casillaCambio,"tiene");
-				}
-				else if(document.getElementById(casillaCambio).style.background == "green")
-				{
-					document.getElementById(casillaCambio).style.background="orange";
-					window.localStorage.setItem(casillaCambio,"repetida");
-				}
-				else if(document.getElementById(casillaCambio).style.background == "orange")
-				{
-					document.getElementById(casillaCambio).style.background="white";
-					window.localStorage.removeItem(casillaCambio);
-				}
-			//}
-			}
-		</script>
-		<script> 
-
-		function cargarEstado(i)
-		{
-				//alert (window.localStorage.getItem("casilla00"));
-				var estadoCasilla = "casilla" + i;
-				
-				var estado = window.localStorage.getItem(estadoCasilla);
-				if(estado =="tiene")
-				{
-					document.getElementById(estadoCasilla).style.background="green";
-				}
-				else if (estado =="repetida")
-				{
-					document.getElementById(estadoCasilla).style.background="orange";
-				}
-				else
-				{
-					document.getElementById(estadoCasilla).style.background="white";
-				}
-			}
-			
-
-		</script> 
 		
 			</div>
 			<div data-role="footer" data-position="fixed">
@@ -200,12 +75,5 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-
-			for(var j=401; j<501;j++)
-			{
-				cargarEstado(j);
-			}
-		</script>		
 	</body>
 </html>
