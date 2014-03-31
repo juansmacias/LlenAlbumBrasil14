@@ -148,7 +148,8 @@
 		</div>
 		<script>
 			$(document).ready(function(){
-   		 	ActualizarLleno();
+   		 		var porcentaje = window.localStorage.getItem("total")/640*100;
+				document.getElementById("completitud").value=("Completo: "+porcentaje+"%");
 			});	
 		</script>
     </body>
