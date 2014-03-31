@@ -9,7 +9,30 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+        <script type="text/javascript">
 
+            document.addEventListener("deviceready", onDeviceReady,false);
+
+            function onDeviceReady() {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $('.casillas').click(function()
+                {
+                    app.MarcarMona(this.id)
+                });
+
+            }
+
+            $(function()
+            {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $(".container").on('click', '.casillas', function()
+                {
+                    app.MarcarMona(this.id)
+                });
+            });
+            </script>
     </head>
     <body >
  <!--   <div class='search-view'> 
