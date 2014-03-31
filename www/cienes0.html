@@ -224,7 +224,19 @@
 		</div>
 		<script type="text/javascript">
 				
-				
+				$(document).ready(function(){
+    
+         $.messager.show({  
+            title:'My Title',  
+            msg:'The message content',  
+            showType:'fade',  
+            style:{  
+                right:'',  
+                bottom:''  
+            
+        });  
+    });
+});
 		function cargarEstadosTotales()
 		{
 			cargarEstado("00");
@@ -235,7 +247,9 @@
 		}
 		</script>	
 		<script>
-		$.cargarEstadosTotales()
+		$(document).ready(function(){
+    cargarEstadosTotales();
+});
 		</script>	
 	</body>
 </html>
