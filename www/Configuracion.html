@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel ='stylesheet' href="css/Monas.css">
+        <link rel='stylesheet' href="css/jquery.mobile-1.4.2.css">
+        <link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+        <script src="js/ls-store.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/pruebas.js"></script>
+        <script type="text/javascript">
+
+            function borrarMonas()
+            {
+                app.borrarMonas();
+            }
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" data-position="fixed">
+                <h1>Configuraciones</h1>
+                <a class="ui-btn-left" data-icon="back" data-role="button" style=" padding-top: 18px; padding-right: 0px; padding-left: 31px;" href="index.html"></a>
+	        </div>
+
+			<div data = "main" class="ui-content" style="text-align: center;">
+                <div>
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-a" style="display:block">
+                            <h1>Llena tu Album 2014</h1>
+                            <img src="icon.png" style="width:30%">
+                            <h3> Elaborado por Andres Cagua y Juan Sebastian Macias</h3>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a class="ui-shadow ui-btn ui-corner-all">Mostrar Tutorial</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a onclick="borrarMonas();" class="ui-shadow ui-btn ui-corner-all">Reiniciar Lista</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

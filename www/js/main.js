@@ -18,7 +18,6 @@ var app = {
     cargarEstado: function(casillaInicial, casillaFinal){
         this.store.cargarEstado(casillaInicial, casillaFinal,function(resultado)
         {
-            debugger;
              var monasCargar = eval ("(" + resultado + ")");
             var l = monasCargar.length;
             var mona;
@@ -44,6 +43,11 @@ var app = {
             }
         });
 
+    },
+
+    borrarMonas: function()
+    {
+        this.store.borrarMonas();
     },
 
 	showAlert: function (message, title) {

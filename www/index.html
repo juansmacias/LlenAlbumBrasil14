@@ -9,23 +9,6 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
-		<script>
-		
-		function CambioEstadoMona(i)
-		{
-				if(document.getElementById("estadoLista").title == "cambio")
-				{
-					if(document.getElementById("casilla"+i).style.background == "white")
-					{
-						document.getElementById("casilla"+i).style.background="green";
-					}
-					else if(document.getElementById("casilla"+i).style.background == "green")
-					{
-						document.getElementById("casilla"+i).style.background="orange";
-					}
-				}
-		}
-		</script>
     </head>
     <body>
  <!--   <div class='search-view'> 
@@ -35,9 +18,10 @@
 		<div data-role="page">
 			<div data-role="header" data-position="fixed">
 				<h1>Tu Lista</h1>
+                <a class="ui-btn-right" data-icon="gear" data-role="button" style="padding-top: 18px; padding-right: 0px; padding-left: 31px;" href="Configuracion.html"></a>
 			</div>
         
-			<div data="main" class="ui-content">
+			<div role="main" class="ui-content">
 				<div style="text-align:center">
     
 					<div class="listas">
@@ -78,14 +62,14 @@
 						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
-								<a href="cienes0.html" target="_parent"style="background:none;border:none">
+								<a href="cienes0.html" target="_parent" data-transition="none" style="background:none;border:none">
 									<span class="listaIzq">
 										00-100
 									</span>
 								</a>
 							</div>
 							<div class ="ui-block-b">
-								<a href="cienes1.html" target="_parent" style="background:none;border:none">
+								<a href="cienes1.html" target="_parent" data-transition="none" style="background:none;border:none">
 									<span class="listaDer">
 										101-200
 									</span>
@@ -94,14 +78,14 @@
 						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
-								<a href="cienes2.html" target="_parent"style="background:none;border:none">
+								<a href="cienes2.html" target="_parent" data-transition="none"style="background:none;border:none">
 									<span class="listaIzq">
 										201-300
 									</span>
 								</a>
 							</div>
 							<div class ="ui-block-b">
-								<a href="cienes3.html" target="_parent"style="background:none;border:none">
+								<a href="cienes3.html" target="_parent" data-transition="none" style="background:none;border:none">
 									<span class="listaDer">
 										301-400
 									</span>
@@ -110,14 +94,14 @@
 						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
-								<a href="cienes4.html" target="_parent"style="background:none;border:none">
+								<a href="cienes4.html" target="_parent" data-transition="none" style="background:none;border:none">
 									<span class="listaIzq">
 										401-500
 									</span>
 								</a>
 							</div>
 							<div class ="ui-block-b">
-								<a href="cienes5.html" target="_parent"style="background:none;border:none">
+								<a href="cienes5.html" target="_parent" data-transition="none" style="background:none;border:none">
 									<span class="listaDer">
 										501-600
 									</span>
@@ -126,7 +110,7 @@
 						</div>
 						<div class="listaFilaSolo">
 							<div class="ui-block-a">
-								<a href="cienes6.html" target="_parent"style="background:none;border:none">
+								<a href="cienes6.html" target="_parent" data-transition="none" style="background:none;border:none">
 									<span class="listaCentro">
 										601-639
 									</span>
@@ -137,8 +121,8 @@
 					<div data-role="footer" data-position="fixed">
 						<div data-role="navbar">
 							<ul>
-								<!--<li><a href="perfil.html" data-transition="slideup" data-icon="home">Mi Perfil</a></li>-->
-								<li><a href="index.html" data-transition="slideup" data-icon="grid">Ver Listas</a></li>
+								<!--<li><a href="perfil.html" data-transition="none" data-icon="home">Mi Perfil</a></li>-->
+								<li><a class ="ui-btn-active monas-footer-item"href="index.html" data-transition="none" data-icon="grid">Tu Lista</a></li>
 								<!--<li><a href="html/Intercambio.html" data-transition="slideup" data-icon="location">Intercambio</a></li> -->
 							</ul>					
 						</div> 
