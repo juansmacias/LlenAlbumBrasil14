@@ -34,7 +34,7 @@ var app = {
 
                 if(mona.casilla =='00')
                 {
-                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black">'+mona.casilla+'</div>');
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black"><p style="opacity:0;">'+mona.casilla+'</p></div>');
                 }
                 else
                 {
@@ -48,6 +48,11 @@ var app = {
     borrarMonas: function()
     {
         this.store.borrarMonas();
+    },
+    
+    mostrarProgreso: function()
+    {
+        this.store.mostrarProgreso();
     },
 
 	showAlert: function (message, title) {

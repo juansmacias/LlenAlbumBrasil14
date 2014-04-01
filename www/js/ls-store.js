@@ -4,11 +4,29 @@ var LocalStorageStore = function(successCallback, errorCallback) {
 
         var EstadoMona = this.darEstadoPorId(idMona);
         if(EstadoMona ==null)
+        {
             EstadoMona = 'tiene';
+            if(window.localStorage.getItem('total')==null)
+            {
+            	window.localStorage.setItem('total',0);
+            }
+            else
+            {
+            	var total = window.localStorage.getItem('total');
+            	total ++;
+            	window.localStorage.setItem('total',total)
+            	alert(window.localStorage.getItem('total'));
+            }
+           } 
         else if (EstadoMona == 'tiene')
             EstadoMona = 'repetida';
         else if (EstadoMona == 'repetida')
+        {
             EstadoMona= null;
+            var total = window.localStorage.getItem('total');
+            	total --;
+            	window.localStorage.setItem('total',total)
+            	}
         this.cambiarEstadoPorID(idMona,EstadoMona)
         callLater(callback, EstadoMona);
     }
@@ -70,6 +88,12 @@ var LocalStorageStore = function(successCallback, errorCallback) {
         window.localStorage.clear();
     }
 
+
+	this.mostrarProgreso = function()
+    {
+        return window.localStorage.getItem('total');
+    }
+    
     // Used to simulate async calls. This is done to provide a consistent interface with stores (like WebSqlStore)
     // that use async data access APIs
     var callLater = function(callback, data) {

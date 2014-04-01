@@ -212,9 +212,11 @@
 				border-color:black;
 				background-color:white;
 				background:white;
-				width: 3em; height: 3em; 
-    -webkit-border-radius: 2em; -moz-border-radius: 2em;
+				width: 4em; height: 2em; 
+				border-radius: 5px;
+			    /*-webkit-border-radius: 2em; -moz-border-radius: 2em;*/
 				float:left;
+				opacity:0.4;
 			}
 			
 			div.cambioFila 

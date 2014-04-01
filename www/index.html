@@ -36,6 +36,20 @@
 						-->
 						<div class="completitud">
 							
+							
+							
+							
+							<script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady,false);
+
+            function onDeviceReady() {
+                
+                var progreso = app.mostrarProgreso();
+                
+				
+            }
+        </script>
 							<script>
 								
 								if(window.localStorage.getItem("total")==null)
@@ -133,7 +147,7 @@
 		<script>
 			$(document).ready(function(){
    		 		var porcentaje = window.localStorage.getItem("total")/640*100;
-				document.getElementById("completitud").value=("Completo: "+porcentaje+"%");
+				document.getElementById("completitud").value=("Progreso: "+porcentaje+"%");
 			});	
 		</script>
     </body>

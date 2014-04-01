@@ -6,7 +6,7 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Llena Tu Album Brasil 14</name>
+    <name>LlenaAlbum</name>
 
     <description>
         La mejor herramienta para llevar control sobre que Monas tienes y cuales repetidas. Asi te encargas de llenar el album del Mundial Brasil y ya!
