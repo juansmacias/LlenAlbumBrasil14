@@ -42,7 +42,6 @@ var app = {
                 }
             }
         });
-
     },
 
     borrarMonas: function()
