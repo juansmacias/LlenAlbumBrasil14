@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Progress Bar for jQuery Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/jQMProgressBar.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="../src/js/jQMProgressBar.js"></script>
+        <script>
+            $(document)
+                .on('pageinit', '#home-page', function () {
+
+                /* 
+                 * show an overlay with progress bar 
+                 */
+                $(["<div id=\"progressbar-overlay\" class=\"ui-jqm-progressbar-overlay\">",
+                    "<div class=\"ui-jqm-progressbar-overlay-box\">",
+                    "<div class=\"ui-jqm-progressbar-overlay-box-corner-top ui-jqm-progressbar-overlay-box-corner-bottom ui-jqm-progressbar-overlay-box-content ui-jqm-progressbar-overlay-box-body-c\">",
+                    "<h1>Loading data..</h1>",
+                    "<p>Place the desired text here in order to inform the user for the procedure which is in progress.</p>",
+                    "<div id=\"progressbar\"></div>",
+                    "</div>",
+                    "</div>",
+                    "</div>"].join(""))
+                    .css({
+                    "opacity": 0.85
+                })
+                    .appendTo($.mobile.pageContainer)
+                    .show(function () {
+
+                    jQMProgressBar('progressbar')
+                        .setOuterTheme('b')
+                        .setInnerTheme('e')
+                        .isMini(false)
+                        .setMax(100)
+                        .setStartFrom(0)
+                        .setInterval(10)
+                        .showCounter(false)
+                        .build()
+                        .run();
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <!-- /page -->
+        <div id="home-page" data-role="page">
+            <!-- /header -->
+            <div data-role="header">
+                 <h1>Progress Bar for jQuery Mobile</h1>
+
+            </div>
+            <!-- /content -->
+            <div data-role="content">
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" value="" placeholder="Username" />
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

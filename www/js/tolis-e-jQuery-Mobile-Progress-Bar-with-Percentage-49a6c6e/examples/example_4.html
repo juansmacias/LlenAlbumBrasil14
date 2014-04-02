@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Progress Bar for jQuery Mobile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/jQMProgressBar.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="../src/js/jQMProgressBar.js"></script>
+        <script>
+            $(document)
+                .on('pagebeforeshow', '#generic-dialog', function () {
+
+                var pbar = jQMProgressBar('progressbar')
+                    .setOuterTheme('b')
+                    .setInnerTheme('e')
+                    .isMini(false)
+                    .setMax(100)
+                    .setStartFrom(0)
+                    .setInterval(5)
+                    .showCounter(false)
+                    .build();
+
+                setTimeout(function () {
+                    pbar.run();
+                }, 2000);
+
+            });
+        </script>
+    </head>
+    
+    <body>
+        <!-- /page -->
+        <div data-role="page" id="home-page">
+            <!-- /header -->
+            <div data-role="header">
+                <h1>Progress Bar for jQuery Mobile</h1>
+
+            </div>
+            <!-- /content -->
+            <div data-role="content">
+                <a href="#generic-dialog" data-role="button" data-inline="true" data-rel="dialog">Open dialog with progress bar</a>
+            </div>
+        </div>
+        <!-- /page -->
+        <div data-role="page" id="generic-dialog">
+            <!-- /header -->
+            <div data-role="header">
+                 <h1>Progress</h1>
+
+            </div>
+            <!-- /content -->
+            <div data-role="content">
+                 <h1>Loading data..</h1>
+
+                <p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
+                <div id="progressbar"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
