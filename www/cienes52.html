@@ -3,13 +3,12 @@
     <head>
 		<link rel ='stylesheet' href="css/Monas.css">
  		<link rel='stylesheet' href="css/jquery.mobile-1.4.2.css">
-		<link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">
+		<link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">   
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
-		<script src="js/cordova.js"></script>
         <script type="text/javascript">
 
             document.addEventListener("deviceready", onDeviceReady,false);
@@ -23,6 +22,7 @@
                 });
 
             }
+
             $(function()
             {
                 var casillas = document.title.split('-');
@@ -32,40 +32,47 @@
                     app.MarcarMona(this.id)
                 });
             });
-        </script>
+            </script>
     </head>
-    <body>
-    <div class="circuloAmarillo"></div>
-    <div class="circuloAmarillo2"></div>
+    <body >
+ <!--   <div class='search-view'> 
+<input class='search-key' type="text"/>
+<ul class='employee-list'></ul> 
+</div> -->
 		<div data-role="page">
 			<div data-role="header" data-position="fixed">
-				<h1 id="titulo">00 - 100</h1>
+				<h1 id="titulo">501 - 600</h1>
 			</div>
 			<div data-role="main" class="ui-content">
 			<div style='margin-bottom:0px;'>
-		<image src="img/fondo2014.png" style="z-index:2;" width="200">
-		<div style='text-align:center;border-radius: 5px;border:1px;border-style:solid;border-color:black;background-color:green;background:#1d437e;color:red;width:75px;height:25px;'>
-			La tengo
+		<div style='text-align:center;border:1px;border-style:solid;border-color:black;background-color:green;background:green;width:65px;height:20px;'>
+			Lista
 		</div> 
-		<div style='text-align:center;border-radius: 5px;border:1px;border-style:solid;border-color:black;background-color:orange;color:red;background:orange;width:75px;height:25px;'>
+		<div style='text-align:center;border:1px;border-style:solid;border-color:black;background-color:orange;background:orange;width:65px;height:20px;'>
 			Repetida
 		</div> 
-		<br>
 	</div>
+	<br>
+	<!--<input class ='ui-btn-active'type='submit' id='btnEstado' onclick='Actualizar()' value='Actualizar'>
+	-->
+	<br>
 	<div id='estadoLista' title='bloqueado'></div>
-	<div class='container'>
+	
 
+<div class='container'>
 		</div>
-            </div>
+		
+			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<!--<li><a href="perfil.html" data-transition="slideup" data-icon="home">Mi Perfil</a></li>-->
-						<li><a class="ui-btn-active" href="index.html" data-transition="none" data-icon="grid">Ver Listas</a></li>
+						<li><a class="ui-btn-active" href="index.html" data-transition="slideup" data-icon="grid">Ver Listas</a></li>
 						<!--<li><a href="html/Intercambio.html" data-transition="slideup" data-icon="location">Intercambio</a></li> -->
-					</ul>					
+					</ul>						
 				</div>
 			</div>
 		</div>
-    </body>
+	</body>
 </html>
+
