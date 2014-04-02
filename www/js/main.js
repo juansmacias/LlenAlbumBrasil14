@@ -34,11 +34,11 @@ var app = {
 
                 if(mona.casilla =='00')
                 {
-                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:red;font-weight: bold;z-index:2"><p style="opacity:0;">'+mona.casilla+'</p></div>');
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:red;font-weight:bold;z-index:2">'+mona.casilla+'</div>');
                 }
                 else
                 {
-                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:red;font-weight:bold ; z-index:2">'+mona.casilla+'</div>');
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:red;font-weight:bold;z-index:2">'+mona.casilla+'</div>');
                 }
             }
         });
