@@ -70,7 +70,7 @@
 								function ActualizarLleno()
 								{
 								var porcentaje = window.localStorage.getItem("total")/640*100;
-								document.getElementById("completitud").value=("Completo: "+porcentaje+"%");
+								document.getElementById("completitud").value=("Completo: "+porcentaje.toFixed(2)+"%");
 								}
 							</script>
 						</div>
