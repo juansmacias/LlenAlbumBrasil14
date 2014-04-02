@@ -39,6 +39,7 @@
                 margin-right:auto;
                 position:none;
                 border-radius:20px;
+                z-index:2;
 			}
 			
 			div.menu
