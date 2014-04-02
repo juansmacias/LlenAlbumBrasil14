@@ -1,12 +1,31 @@
 
-			
-			
-			body.fondo
+			div.circuloAmarillo
 			{
-				text-align:center;
-				color:black;
-				background-color:#E8E510;
-				background:#E8E510;
+				position:absolute;
+				bottom: -80px;
+				left: -100px;
+				width:400px;
+				height: 400px;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: yellow;
+				opacity:0.3;
+				z-index:1;
+			}
+			div.circuloAmarillo2
+			{
+				top:-150px;
+				margin-left:20%;
+				position:absolute;
+				width: 500px;
+				height: 500px;
+				-moz-border-radius: 60%;
+				-webkit-border-radius: 60%;
+				border-radius: 50%;
+				background: yellow;
+				opacity:0.2;
+				z-index:1;
 			}
 			
 			div.listas 
@@ -211,12 +230,12 @@
 				border-style:solid;
 				border-color:black;
 				background-color:white;
-				background:white;
+				background:rgb(255,1,1);
 				width: 4em; height: 2em; 
 				border-radius: 5px;
 			    /*-webkit-border-radius: 2em; -moz-border-radius: 2em;*/
 				float:left;
-				opacity:0.4;
+				/*opacity:0.4;*/
 			}
 			
 			div.cambioFila 
@@ -227,8 +246,9 @@
 			}
 			div.container
 			{
-				
+				z-index:2;
 				margin-left:5%;
 				margin-right:3%;
 				border
+				
 			}

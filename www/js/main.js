@@ -3,9 +3,9 @@ var app = {
     MarcarMona: function(idMona) {
         this.store.MarcarMona(idMona,function(EstadoMona) {
             if(EstadoMona == null)
-                document.getElementById(idMona).style.background="white"
+                document.getElementById(idMona).style.background="rgba(255,255,255,0.6)"
             else if (EstadoMona == 'tiene')
-                document.getElementById(idMona).style.background="green"
+                document.getElementById(idMona).style.background="#1d437e"
             else
                 document.getElementById(idMona).style.background="orange"
         });
@@ -28,17 +28,17 @@ var app = {
                 if(mona.estado == 'repetida')
                     color = 'orange';
                 else if (mona.estado == 'tiene')
-                    color = 'green';
+                    color = '#1d437e';
                 else
-                    color = 'white';
+                    color = 'rgba(255,255,255,0.6)';
 
                 if(mona.casilla =='00')
                 {
-                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black"><p style="opacity:0;">'+mona.casilla+'</p></div>');
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black;z-index:2"><p style="opacity:0;">'+mona.casilla+'</p></div>');
                 }
                 else
                 {
-                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black">'+mona.casilla+'</div>');
+                    $('.container').append('<div id = "casilla' + mona.casilla + '" class="casillas" style="background:'+color+ ';color:black; z-index:2">'+mona.casilla+'</div>');
                 }
             }
         });
