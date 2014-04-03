@@ -9,6 +9,14 @@
 		<script src="js/ls-store.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/pruebas.js"></script>
+		<script type="text/javascript">
+
+           
+            $(function()
+            {
+                app.mostrarProgreso();
+            });
+        </script>
     </head>
     <body>
  <!--   <div class='search-view'> 
@@ -36,20 +44,6 @@
 						-->
 						<div class="completitud">
 							
-							
-							
-							
-							<script type="text/javascript">
-
-            document.addEventListener("deviceready", onDeviceReady,false);
-
-            function onDeviceReady() {
-                
-                var progreso = app.mostrarProgreso();
-                
-				
-            }
-        </script>
 							<script>
 								
 								if(window.localStorage.getItem("total")==null)
@@ -63,16 +57,9 @@
 								}
 
 							</script>
-							
-							<input type="text" style="text-align:center;" id="completitud"  value="Total: 0%" readonly>  
-							<script>
-								//var porcentaje = calcularCompletitud();
-								function ActualizarLleno()
-								{
-								var porcentaje = window.localStorage.getItem("total")/640*100;
-								document.getElementById("completitud").value=("Completo: "+porcentaje.toFixed(2)+"%");
-								}
-							</script>
+							<div class="containerIndex">
+							</div>
+									
 						</div>
 						<div class="listaFilas ui-grid-a">
 							<div class="ui-block-a">
@@ -144,12 +131,7 @@
 				</div>
 			</div>		
 		</div>
-		<script>
-			$(document).ready(function(){
-   		 		var porcentaje = window.localStorage.getItem("total")/640*100;
-				document.getElementById("completitud").value=("Progreso: "+porcentaje+"%");
-			});	
-		</script>
+
     </body>
 </html>
 

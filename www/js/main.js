@@ -51,7 +51,10 @@ var app = {
     
     mostrarProgreso: function()
     {
-        this.store.mostrarProgreso();
+        var progreso = this.store.mostrarProgreso()*100/640;
+        var porcentaje = progreso.toFixed(2);
+        
+        $('.containerIndex').append( porcentaje);
     },
 
 	showAlert: function (message, title) {

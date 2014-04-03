@@ -14,7 +14,7 @@ var LocalStorageStore = function(successCallback, errorCallback) {
             {
             	var total = window.localStorage.getItem('total');
             	total ++;
-            	window.localStorage.setItem('total',total)
+            	window.localStorage.setItem('total',total);
             }
            } 
         else if (EstadoMona == 'tiene')
