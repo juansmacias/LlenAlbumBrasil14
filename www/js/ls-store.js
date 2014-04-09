@@ -3,7 +3,7 @@ var LocalStorageStore = function(successCallback, errorCallback) {
     this.MarcarMona = function(idMona, callback) {
 
         var EstadoMona = this.darEstadoPorId(idMona);
-        if(EstadoMona ==null)
+        if(EstadoMona == null)
         {
             EstadoMona = 'tiene';
             if(window.localStorage.getItem('total')==null)
@@ -51,7 +51,7 @@ var LocalStorageStore = function(successCallback, errorCallback) {
             idMona = 'casilla' + casillaInicial;
             jsonCargar += '{"casilla": "00" , "estado": "'+this.darEstadoPorId(idMona)+'"},';
 
-            for(i=0;i<(parseInt(casillaFinal)+1);i++)
+            for(i=1;i<(parseInt(casillaFinal)+1);i++)
             {
                 idMona = 'casilla' + i;
                 if(i==parseInt(casillaFinal))

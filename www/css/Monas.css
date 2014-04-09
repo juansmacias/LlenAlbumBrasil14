@@ -234,6 +234,7 @@
 				background:rgb(255,1,1);
 				width: 4em; height: 2em; 
 				border-radius: 5px;
+				text-shadow:0 0.8px 0 #000000;
 			    /*-webkit-border-radius: 2em; -moz-border-radius: 2em;*/
 				float:left;
 				/*opacity:0.4;*/
