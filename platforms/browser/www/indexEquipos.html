@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel ='stylesheet' href="css/Monas.css">
+ 		<link rel='stylesheet' href="css/jquery.mobile-1.4.2.css">
+		<link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">   
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+		<script src="js/ls-store.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		
+		function CambioEstadoMona(i)
+		{
+				if(document.getElementById("estadoLista").title == "cambio")
+				{
+					if(document.getElementById("casilla"+i).style.background == "white")
+					{
+						document.getElementById("casilla"+i).style.background="green";
+					}
+					else if(document.getElementById("casilla"+i).style.background == "green")
+					{
+						document.getElementById("casilla"+i).style.background="orange";
+					}
+				}
+		}
+		window.localStorage.clear();
+		
+		</script>
+    </head>
+    <body >
+ <!--   <div class='search-view'> 
+<input class='search-key' type="text"/>
+<ul class='employee-list'></ul> 
+</div> -->
+		<div data-role="page">
+			<div data-role="header" data-position="fixed">
+				<h1>Tu Lista</h1>
+			</div>
+        
+			<div data="main" class="ui-content">
+				<div style="text-align:center">
+    
+					<div class="listas">
+						<div class="busquedas">
+							
+							<span class="busquedaNumeros2" style="color:white;">Equipos</span>
+							<a href="index.html">
+							<span class="busquedaEquipos2" style="color:#4BB5FF;">Numeros</span>
+							</a>
+						</div>
+						<div class="listaFilas ui-grid-a">
+							<div class="ui-block-a">
+								<a href="cienes0.html" style="background:none;border:none">
+									<span class="listaIzq">
+										Grupo A
+									</span>
+								</a>
+							</div>
+							<div class ="ui-block-b">
+								<a href="Cienes-lista.html" style="background:none;border:none">
+									<span class="listaDer">
+										Grupo B
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="listaFilas ui-grid-a">
+							<div class="ui-block-a">
+								<a href="Cienes-lista.html" style="background:none;border:none">
+									<span class="listaIzq">
+										Grupo C
+									</span>
+								</a>
+							</div>
+							<div class ="ui-block-b">
+								<a href="Cienes-lista.html" style="background:none;border:none">
+									<span class="listaDer">
+										Grupo D
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="listaFilas ui-grid-a">
+							<div class="ui-block-a">
+								<a href="Cienes-lista.html" style="background:none;border:none">
+									<span class="listaIzq">
+										Grupo E
+									</span>
+								</a>
+							</div>
+							<div class ="ui-block-b">
+								<a href="Cienes-lista.html" style="background:none;border:none">
+									<span class="listaDer">
+										Grupo F
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="listaFilaSolo">
+							<div class="ui-block-a" style="padding-left:386px">
+								<a href="Cienes-lista.html" style="background:none;border:none">
+									<span class="listaCentro">
+										Otros
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>		
+					<div data-role="footer" data-position="fixed">
+						<div data-role="navbar">
+							<ul>
+								<li><a href="perfil.html" data-transition="slideup" data-icon="home">Mi Perfil</a></li>
+								<li><a class="ui-btn-active" href="index.html" data-transition="slideup" data-icon="grid">Mi Lista</a></li>
+								<!--<li><a href="html/Intercambio.html" data-transition="slideup" data-icon="location">Intercambio</a></li> -->
+							</ul>					
+						</div> 
+					</div> 
+				</div>
+			</div>		
+		</div>
+    </body>
+</html>
+

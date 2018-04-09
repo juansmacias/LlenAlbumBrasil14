@@ -1,0 +1,256 @@
+
+			div.circuloAmarillo
+			{
+				position:absolute;
+				bottom: -350px;
+				left: -350px;
+				width:600px;
+				height:600px;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: yellow;
+				opacity:0.3;
+				z-index:1;
+			}
+			div.circuloAmarillo2
+			{
+				top:-20px;
+				right:5px;
+				position:absolute;
+				width:270px;
+				height:270px;
+				-moz-border-radius: 60%;
+				-webkit-border-radius: 60%;
+				border-radius: 50%;
+				background: yellow;
+				opacity:0.2;
+				z-index:1;
+			}
+			
+			div.listas 
+			{
+    			text-align:center;
+				background-color:#A2E83F;
+				background:#A2E83F;
+				width:80%;
+				height:400px;
+				margin-left:auto;
+                margin-right:auto;
+                position:none;
+                border-radius:20px;
+                z-index:2;
+			}
+			
+			div.menu
+			{
+			    position:absolute;
+			    text-align:center;
+				background-color:#A2E83F;
+				background:#A2E83F;
+				width:100%;
+				height:15%;
+				margin-top:10%;
+				margin bottom:0px;
+                
+			}
+			
+			div.circulo
+			{
+			    position:relative;
+			    text-align:center;
+				background-color:#A2E83F;
+				background:#A2E83F;
+				width:140px;
+				height:110px;
+				border-radius:130px;
+				margin-top:-30px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			div.busquedas
+			{
+			    position:relative;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:0px solid #4BB5FF;
+			    border-radius:10px 10px 10px 10px;
+				background-color:none;
+				background:none;
+				width:200px;
+				height:25px;
+				margin-left:auto;
+				margin-right:auto;
+				top: 5%;
+			}
+			
+			span.busquedaNumeros
+			{
+			    position:static;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:2px solid #4BB5FF;
+			    border-radius:10px 0px 0px 10px;
+				background-color:none;
+				background:white;
+				width:100px;
+				height:25px;
+				margin-left:40%;
+				margin-right:50%;
+    			display:inline-block;
+    			float:right;
+    			opacity:0.55;
+				
+			}
+			span.busquedaEquipos
+			{
+			    position:absolute;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:2px solid #4BB5FF;
+			    border-radius:0px 10px 10px 0px;
+				background:#4BB5FF;
+				width:100px;
+				height:25px;
+				margin-left:50%;
+				margin-right:auto;
+				float:right;
+			}
+			span.busquedaNumeros2
+			{
+			    position:static;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:2px solid #4BB5FF;
+			    border-radius:10px 0px 0px 10px;
+				background-color:none;
+				background:#4BB5FF;
+				width:100px;
+				height:25px;
+				margin-left:40%;
+				margin-right:50%;
+    			display:inline-block;
+    			float:right;
+    			
+				
+			}
+			span.busquedaEquipos2
+			{
+			    position:absolute;
+			    text-align:center;
+			    border-color:#4BB5FF;
+			    border:2px solid #4BB5FF;
+			    border-radius:0px 10px 10px 0px;
+				background:white;
+				width:100px;
+				height:25px;
+				margin-left:50%;
+				margin-right:auto;
+				float:right;
+				opacity:0.55;
+			}
+			div.listaFilas
+			{
+			    position:relative;
+			    text-align:center;
+			    border-color:white;
+			    border:2px solid none;
+			    color:black;
+			    width:90%;
+			    height:70px;
+			    border-radius:25px;
+			    top:10%;
+			    padding: 5px 5px 5px 5px;
+			    margin:0 auto;
+			}
+			div.listaFilaSolo
+			{
+			    position:relative;
+			    text-align:center;
+			    border-color:white;
+			    border:2px solid none;
+			    color:black;
+			    width:80px;
+			    height:50px;
+			    border-radius:25px;
+			    top:10%;
+			    padding: 5px 5px 5px 0px;
+			    margin:0 auto;
+
+			}
+			span.listaIzq
+			{
+			    text-align:center;
+			    border-color:white;
+			    padding:25px 12px 25px 12px;
+			    border:2px solid white;
+			    color:white;
+			    width:60px;
+			    height:10px;
+			    border-radius:25px;
+			    float:left;
+
+			}
+			span.listaDer
+			{
+			    text-align:center;
+			    border-color:white;
+			    padding:25px 12px 25px 12px;
+			    border:2px solid white;
+			    color:white;
+			    width:60px;
+			    height:10px;
+			    border-radius:25px;
+			    float:right;
+			}
+			span.listaCentro
+			{
+			    text-align:center;
+			    border-color:white;
+			    padding:25px 12px 25px 12px;
+			    border:2px solid white;
+			    color:white;
+			    width:60px;
+			    height:10px;
+			    float:right;
+			    border-radius:25px;
+			    margin-right:auto;
+			    
+			}
+			.monas-footer-item
+			{
+				background:#E8E510;
+				border-color: #E8E510;
+			}
+			
+			div.casillas
+			{
+				position:relative;
+				text-align:center;
+				border:1px;
+				border-style:solid;
+				border-color:black;
+				background-color:white;
+				background:rgb(255,1,1);
+				width: 4em; height: 2em; 
+				border-radius: 5px;
+				text-shadow:0 0.8px 0 #000000;
+			    /*-webkit-border-radius: 2em; -moz-border-radius: 2em;*/
+				float:left;
+				/*opacity:0.4;*/
+			}
+			
+			div.cambioFila 
+			{
+    			margin-bottom: 0px;
+    			padding: 0px;
+    			clear:both;
+			}
+			div.container
+			{
+				z-index:2;
+				margin-left:5%;
+				margin-right:3%;
+				border
+				
+			}

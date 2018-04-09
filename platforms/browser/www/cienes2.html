@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel ='stylesheet' href="css/Monas.css">
+ 		<link rel='stylesheet' href="css/jquery.mobile-1.4.2.css">
+		<link rel='stylesheet' href="css/monas-jQuery1.4.2.min.css">
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+		<script src="js/ls-store.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/pruebas.js"></script>
+		<script src="js/cordova.js"></script>
+        <script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady,false);
+
+            function onDeviceReady() {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $('.casillas').click(function()
+                {
+                    app.MarcarMona(this.id)
+                });
+
+            }
+            $(function()
+            {
+                var casillas = document.title.split('-');
+                app.cargarEstado(casillas[0].trim(),casillas[1].trim());
+                $(".container").on('click', '.casillas', function()
+                {
+                    app.MarcarMona(this.id)
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <div class="circuloAmarillo"></div>
+    <div class="circuloAmarillo2"></div>
+		<div data-role="page">
+			<div data-role="header" data-position="fixed">
+				<h1 id="titulo">201 - 300</h1>
+				<a class ="ui-btn-icon-left" data-icon="carat-l" data-role="button" href="index.html" target ="_parent" style="text-shadow: 0 1px 0 #000000">Atras</a>
+			</div>
+			<div data-role="main" class="ui-content">
+			    <div style='margin-bottom:0px;'>
+			    <img src="img/fondo2014.png" style="z-index:2;" width="200">
+		        <div style='text-align:center;border-radius: 5px;border:1px;border-style:solid;border-color:black;
+		        background-color:green;background:#1d437e;color:red;width:75px;height:25px;text-shadow:0 0px 0 #000000'>La tengo</div> 
+		        <div style='text-align:center;border-radius: 5px;border:1px;border-style:solid;border-color:black;background-color:orange;color:red;
+		        background:orange;width:75px;height:25px;text-shadow:0 0px 0 #000000'>Repetida</div> 
+		        <a class="ui-btn-left" data-icon="back" data-role="button" style=" padding-top: 18px; padding-right: 0px; padding-left: 31px;" href="index.html"></a>
+		        <br>
+		        </div>
+		        <div class='container'>
+
+		        </div>
+	        </div>
+	   </div>
+	   <div id='estadoLista' title='bloqueado'></div>
+    </body>
+</html>
